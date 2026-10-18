@@ -1,0 +1,78 @@
+danger_levels:
+  - safe
+  - suspicious
+  - dangerous
+
+channels:
+  - sms
+  - email
+  - chat
+  - social
+  - other
+
+tactics:
+  urgency:
+    definition: Pressures the recipient to act before they can verify the claim.
+    examples:
+      - "Act in the next ten minutes to avoid a fee."
+      - "Respond immediately; this offer expires today."
+  threat:
+    definition: Warns of punishment, loss, arrest, or harm for noncompliance.
+    examples:
+      - "Pay now or your service will be disconnected."
+      - "A warrant will be issued unless you respond."
+  impersonation:
+    definition: Pretends to be a trusted organization, authority, or person.
+    examples:
+      - "This is your bank's security department."
+      - "I am contacting you on behalf of the tax office."
+  unusual_payment:
+    definition: Requests hard-to-reverse payment by gift card, crypto, wire, or Zelle.
+    examples:
+      - "Buy gift cards and send the numbers to settle the balance."
+      - "Transfer the funds by crypto, wire, or Zelle."
+  credential_request:
+    definition: Asks for passwords, verification codes, sensitive credentials, or remote access.
+    examples:
+      - "Reply with the security code we just sent you."
+      - "Install this remote access tool so I can fix the issue."
+  off_platform_push:
+    definition: Pushes a conversation away from the original service or its protections.
+    examples:
+      - "Leave the marketplace chat and text me directly."
+      - "Continue this conversation in a private messaging app."
+  too_good_to_be_true:
+    definition: Promises an implausibly valuable reward, return, or opportunity.
+    examples:
+      - "You won a prize even though you never entered."
+      - "Earn guaranteed returns with no risk."
+  secrecy:
+    definition: Tells the recipient to hide the interaction from trusted people.
+    examples:
+      - "Do not tell your family about this payment."
+      - "Keep this confidential from your bank."
+  lookalike_link:
+    definition: Uses a misleading or imitation link to capture information or payment.
+    examples:
+      - "Verify at https://account-check.example.com/login."
+      - "Track the parcel at https://delivery-help.example.net."
+  relationship_exploit:
+    definition: Exploits family distress, romance, or trusted-person impersonation.
+    examples:
+      - "Hi Mom, my phone broke and I need money for an emergency."
+      - "I love you, but I need help paying to visit you."
+
+categories:
+  - package_delivery
+  - bank_alert
+  - government_impersonation
+  - tech_support
+  - romance
+  - family_emergency
+  - job_offer
+  - prize_or_lottery
+  - investment_crypto
+  - marketplace
+  - utility_or_billing
+  - other
+
