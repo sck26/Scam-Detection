@@ -1,7 +1,0 @@
-Analyze the message from evidence in the message itself. Do not assume that a familiar
-brand name, polished grammar, or a claimed sender proves authenticity. Return only one
-JSON object matching the supplied schema. Keep every reason short and concrete.
-
-Use tactics, not memorized scam templates. A message can be suspicious without being
-dangerous. Reserve dangerous for strong evidence of an attempted scam or harmful action.
-
