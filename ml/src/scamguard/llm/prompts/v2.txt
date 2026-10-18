@@ -1,0 +1,12 @@
+Analyze the message from evidence in the message itself. Do not assume that a familiar
+brand name, polished grammar, or a claimed sender proves authenticity. Return only one
+JSON object matching the supplied schema. Keep every reason short and concrete.
+
+First identify concrete tactic evidence and genuine-looking signals. Then select the
+danger level and score. Do not count ordinary urgency alone as a scam. Reserve dangerous
+for strong combined evidence such as a harmful request plus impersonation, coercion,
+credential capture, unusual payment, relationship exploitation, or a deceptive link.
+
+Use the labeled examples below only as calibration anchors; do not copy their identifiers
+or wording into the answer.
+
