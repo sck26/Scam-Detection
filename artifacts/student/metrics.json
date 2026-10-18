@@ -1,0 +1,74 @@
+{
+  "teacher": {
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "prompt": "v2",
+    "candidate_count": 600,
+    "confident_kept": 593,
+    "uncertain_dropped": 7,
+    "confidence_cutoffs": [
+      0.19999999999999996,
+      0.8
+    ],
+    "agreement_with_original_labels": 0.9716666666666667
+  },
+  "student": {
+    "type": "word TF-IDF (1-2 grams) plus logistic regression",
+    "training_examples": 474,
+    "calibration_examples": 119,
+    "safe_threshold": 0.6300619475935576,
+    "dangerous_threshold": 0.670274239493989,
+    "dev_metrics": {
+      "threshold": 0.670274239493989,
+      "precision": 1.0,
+      "recall": 0.5476190476190477,
+      "f1": 0.7076923076923077,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.4523809523809524,
+      "accuracy": 0.7888888888888889,
+      "confusion_matrix": {
+        "tn": 48,
+        "fp": 0,
+        "fn": 19,
+        "tp": 23
+      }
+    },
+    "dev_confidence_intervals_95": {
+      "precision": {
+        "low": 0.8568788745827374,
+        "high": 1.0
+      },
+      "recall": {
+        "low": 0.39948862747122693,
+        "high": 0.6877683618136149
+      },
+      "false_positive_rate": {
+        "low": 0.0,
+        "high": 0.0741026511527422
+      }
+    },
+    "teacher_agreement_on_dev": 0.7777777777777778,
+    "dev_latency_ms_per_message": 0.010160188604560163,
+    "dev_resolved_fraction": 0.8666666666666667,
+    "dev_resolved_accuracy": 0.9102564102564102
+  },
+  "exports": {
+    "joblib_bytes": 78897,
+    "onnx_bytes": 62995,
+    "preprocessing_bytes": 89654,
+    "feature_count": 1650,
+    "onnx_smoke_probabilities": [
+      0.4388997256755829,
+      0.5611002445220947
+    ],
+    "quantization": "none (float32; compact sparse linear model)",
+    "coreml_path": null,
+    "coreml_error": "ValueError: Transformer 'TfidfVectorizer(max_features=30000, min_df=2, ngram_range=(1, 2),\n                sublinear_tf=True)' not supported; supported transformers are coremltools.converters.sklearn._dict_vectorizer,coremltools.converters.sklearn._one_hot_encoder,coremltools.converters.sklearn._normalizer,coremltools.converters.sklearn._standard_scaler,coremltools.converters.sklearn._imputer,coremltools.converters.sklearn._NuSVC,coremltools.converters.sklearn._NuSVR,coremltools.converters.sklearn._SVC,coremltools.converters.sklearn._SVR,coremltools.converters.sklearn._linear_regression,coremltools.converters.sklearn._LinearSVC,coremltools.converters.sklearn._LinearSVR,coremltools.converters.sklearn._logistic_regression,coremltools.converters.sklearn._random_forest_classifier,coremltools.converters.sklearn._random_forest_regressor,coremltools.converters.sklearn._decision_tree_classifier,coremltools.converters.sklearn._decision_tree_regressor,coremltools.converters.sklearn._gradient_boosting_classifier,coremltools.converters.sklearn._gradient_boosting_regressor,coremltools.converters.sklearn._k_neighbors_classifier,coremltools.converters.sklearn._ridge_regression.",
+    "coreml_linear_head_path": "artifacts/student/student-linear.mlmodel",
+    "coreml_linear_head_bytes": 6767,
+    "coreml_linear_head_error": null,
+    "coreml_smoke_probability": 0.5611003,
+    "coreml_smoke_error": null,
+    "onnx_path": "artifacts/student/student.onnx"
+  },
+  "test_evaluation": "not rerun: the single frozen TEST evaluation was already completed in Step 6; preserving the lock takes precedence"
+}

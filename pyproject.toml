@@ -30,6 +30,18 @@ dev = [
   "types-PyYAML>=6.0",
   "types-requests>=2.32",
 ]
+models = [
+  "accelerate>=1.1",
+  "torch>=2.5",
+  "transformers>=4.46",
+]
+student = [
+  "coremltools>=8.1",
+  "joblib>=1.4",
+  "onnxruntime>=1.20",
+  "scikit-learn==1.5.1",
+  "skl2onnx>=1.18",
+]
 
 [tool.hatch.build.targets.wheel]
 packages = ["ml/src/scamguard"]
@@ -54,4 +66,8 @@ files = ["ml/src", "ml/tests"]
 
 [[tool.mypy.overrides]]
 module = ["sklearn.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["coremltools.*", "joblib.*", "onnxruntime.*", "skl2onnx.*"]
 ignore_missing_imports = true

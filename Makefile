@@ -2,8 +2,9 @@ PYTHON := $(if $(wildcard .venv/bin/python),.venv/bin/python,python3)
 RUFF := $(if $(wildcard .venv/bin/ruff),.venv/bin/ruff,ruff)
 MYPY := $(if $(wildcard .venv/bin/mypy),.venv/bin/mypy,mypy)
 PYTEST := $(if $(wildcard .venv/bin/pytest),.venv/bin/pytest,pytest)
+export PYTHONPATH := ml/src
 
-.PHONY: setup lint format typecheck test data eval
+.PHONY: setup lint format typecheck test data eval leakage models hardware experiments final-eval distill
 
 setup:
 	@if command -v uv >/dev/null 2>&1; then \
@@ -31,4 +32,24 @@ data:
 	$(PYTHON) -m scamguard.data
 
 eval: data
-	$(PYTHON) -m scamguard.eval --model all --data data/eval/test_set.csv --out reports/
+	$(PYTHON) -m scamguard.eval --model all --data data/eval/dev.csv --out reports/
+
+leakage:
+	$(PYTHON) -m scamguard.leakage --pool data/pool/pool.csv --eval data/eval/test_set.csv
+
+models:
+	$(PYTHON) -m scamguard.model_setup
+
+hardware:
+	$(PYTHON) -m scamguard.hardware
+
+experiments:
+	$(PYTHON) -m scamguard.experiments --data data/eval/dev.csv \
+		--out docs/phase1/results/dev_results.json
+
+final-eval:
+	$(PYTHON) -m scamguard.final_eval --final \
+		--out docs/phase1/results/final_results.json
+
+distill:
+	$(PYTHON) -m scamguard.distill all

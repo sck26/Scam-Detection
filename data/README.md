@@ -80,3 +80,32 @@ detection research only: do not click, crawl, resolve, redistribute, or use them
 as a production blocklist without a separate legal, safety, and quality review.
 Public labels can be stale or wrong. None of these sources is user telemetry.
 
+## Committed synthetic data
+
+- `data/eval/test_set.csv` is the immutable 150-row Phase 0 evaluation source.
+- `data/eval/dev.csv` is the deterministic 60% development partition.
+- `data/eval/test.csv` is the locked 40% held-out partition and requires the
+  evaluator's explicit `--final` flag. Final attempts are audit-logged locally.
+- `data/pool/pool.csv` contains 432 separate original synthetic examples for
+  few-shot prompts and distillation only. It must never be used for metrics.
+
+`make leakage` compares the pool with the complete evaluation source by ID,
+normalized exact text, and character TF-IDF cosine similarity (default threshold
+0.88). The same check runs in tests, so cross-dataset leakage fails CI.
+
+## Phase 1 usage rules
+
+- DEV is the only split allowed for prompt/model/threshold selection.
+- TEST is accessible to evaluators only with `--final`; each attempt is written
+  to ignored `reports/test_runs.log`. The committed Phase 1 result came from one
+  STARTED/COMPLETED run on 2026-10-17.
+- Pool rows may be used for few-shot prompts, calibration examples, and teacher
+  distillation, but never evaluation metrics.
+- `data/distill/` is ignored. It contains resumable teacher labels with public
+  or synthetic text and must not be committed.
+- The student candidate set uses all 432 pool rows plus a deterministic balanced
+  sample of 168 locally processed UCI messages (seed 20261017). It checks these
+  candidates against the immutable 150-row eval source and removes any ID,
+  exact-text, or near-duplicate collision before labeling.
+- DEV and TEST rows are never student-training candidates. The student was not
+  rescored on TEST after Step 6, preserving the one-shot held-out contract.

@@ -1,0 +1,5038 @@
+{
+  "generated_at": "2026-10-17T23:31:22.962563+00:00",
+  "data": "data/eval/test.csv",
+  "examples": 60,
+  "selection_frozen_from": "docs/phase1/results/dev_results.json",
+  "models": [
+    {
+      "name": "frozen_local_llm",
+      "model": "qwen3:4b-instruct-2507-q4_K_M",
+      "prompt_version": "v2",
+      "prompt_sha256": "a60ea14fb94faf1e86d221ea40db0d337889eaae9cca17a1511fc775ed7497d8",
+      "few_shot_ids": [
+        "pool_0019",
+        "pool_0073",
+        "pool_0145",
+        "pool_0217",
+        "pool_0289",
+        "pool_0361"
+      ],
+      "thresholds": {
+        "safe_below": 0.4821874908096537,
+        "dangerous_at_or_above": 0.6972709223552555
+      },
+      "calibration": {
+        "method": "Platt scaling frozen on DEV",
+        "coefficient": 4.528079812720718,
+        "intercept": -2.1089161175958253
+      },
+      "metrics": {
+        "threshold": 0.6972709223552555,
+        "precision": 0.9655172413793104,
+        "recall": 1.0,
+        "f1": 0.9824561403508771,
+        "false_positive_rate": 0.03125,
+        "false_negative_rate": 0.0,
+        "accuracy": 0.9833333333333333,
+        "confusion_matrix": {
+          "tn": 31,
+          "fp": 1,
+          "fn": 0,
+          "tp": 28
+        }
+      },
+      "confidence_intervals_95": {
+        "precision": {
+          "low": 0.8282410893529976,
+          "high": 0.9938869433859677
+        },
+        "recall": {
+          "low": 0.8793527963418923,
+          "high": 1.0
+        },
+        "false_positive_rate": {
+          "low": 0.005537717362550945,
+          "high": 0.15744607800372734
+        }
+      },
+      "errors": 0,
+      "error_metric_policy": "explicit errors are conservatively scored positive",
+      "per_category": {
+        "bank_alert": {
+          "threshold": 0.6972709223552555,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 3
+          },
+          "count": 3
+        },
+        "family_emergency": {
+          "threshold": 0.6972709223552555,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 3
+          },
+          "count": 3
+        },
+        "government_impersonation": {
+          "threshold": 0.6972709223552555,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 3
+          },
+          "count": 3
+        },
+        "investment_crypto": {
+          "threshold": 0.6972709223552555,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 3
+          },
+          "count": 3
+        },
+        "job_offer": {
+          "threshold": 0.6972709223552555,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 2
+        },
+        "marketplace": {
+          "threshold": 0.6972709223552555,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 2
+        },
+        "other": {
+          "threshold": 0.6972709223552555,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "false_positive_rate": 0.03125,
+          "false_negative_rate": 0.0,
+          "accuracy": 0.9705882352941176,
+          "confusion_matrix": {
+            "tn": 31,
+            "fp": 1,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 34
+        },
+        "package_delivery": {
+          "threshold": 0.6972709223552555,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 2
+        },
+        "prize_or_lottery": {
+          "threshold": 0.6972709223552555,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 2
+        },
+        "romance": {
+          "threshold": 0.6972709223552555,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 2
+        },
+        "tech_support": {
+          "threshold": 0.6972709223552555,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 2
+        },
+        "utility_or_billing": {
+          "threshold": 0.6972709223552555,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 2
+        }
+      },
+      "per_channel": {
+        "chat": {
+          "threshold": 0.6972709223552555,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 5,
+            "fp": 0,
+            "fn": 0,
+            "tp": 7
+          },
+          "count": 12
+        },
+        "email": {
+          "threshold": 0.6972709223552555,
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "f1": 0.9411764705882353,
+          "false_positive_rate": 0.09090909090909091,
+          "false_negative_rate": 0.0,
+          "accuracy": 0.9473684210526315,
+          "confusion_matrix": {
+            "tn": 10,
+            "fp": 1,
+            "fn": 0,
+            "tp": 8
+          },
+          "count": 19
+        },
+        "other": {
+          "threshold": 0.6972709223552555,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 3,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 5
+        },
+        "sms": {
+          "threshold": 0.6972709223552555,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 12,
+            "fp": 0,
+            "fn": 0,
+            "tp": 6
+          },
+          "count": 18
+        },
+        "social": {
+          "threshold": 0.6972709223552555,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 1,
+            "fp": 0,
+            "fn": 0,
+            "tp": 5
+          },
+          "count": 6
+        }
+      },
+      "tactic_metrics": {
+        "urgency": {
+          "precision": 0.7027027027027027,
+          "recall": 1.0,
+          "support": 26
+        },
+        "threat": {
+          "precision": 0.21212121212121213,
+          "recall": 1.0,
+          "support": 7
+        },
+        "impersonation": {
+          "precision": 0.4444444444444444,
+          "recall": 1.0,
+          "support": 16
+        },
+        "unusual_payment": {
+          "precision": 0.5757575757575758,
+          "recall": 1.0,
+          "support": 19
+        },
+        "credential_request": {
+          "precision": 0.21212121212121213,
+          "recall": 1.0,
+          "support": 7
+        },
+        "off_platform_push": {
+          "precision": 0.14705882352941177,
+          "recall": 1.0,
+          "support": 5
+        },
+        "too_good_to_be_true": {
+          "precision": 0.21212121212121213,
+          "recall": 1.0,
+          "support": 7
+        },
+        "secrecy": {
+          "precision": 0.1388888888888889,
+          "recall": 1.0,
+          "support": 5
+        },
+        "lookalike_link": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "support": 7
+        },
+        "relationship_exploit": {
+          "precision": 0.15151515151515152,
+          "recall": 1.0,
+          "support": 5
+        }
+      },
+      "performance": {
+        "median_latency_seconds": 2.8642763330135494,
+        "p95_latency_seconds": 3.5769773874868402,
+        "mean_tokens_per_second": 29.196842573520073
+      },
+      "misclassified": [
+        {
+          "id": "eval_090",
+          "actual": "legit",
+          "predicted": "scam",
+          "calibrated_score": 0.6972709223552555,
+          "raw_score": 0.65
+        }
+      ],
+      "predictions": [
+        {
+          "id": "eval_025",
+          "actual": "scam",
+          "raw_score": 0.95,
+          "calibrated_score": 0.8995974431664575,
+          "output": {
+            "danger_level": "dangerous",
+            "score": 0.95,
+            "tactics": [
+              "relationship_exploit",
+              "secrecy",
+              "unusual_payment",
+              "lookalike_link",
+              "urgency",
+              "threat",
+              "impersonation",
+              "credential_request",
+              "off_platform_push",
+              "too_good_to_be_true"
+            ],
+            "scam_category": "romance",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 12.215764624997973,
+          "tokens_per_second": 30.857111370294522
+        },
+        {
+          "id": "eval_135",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [
+              "urgency"
+            ],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.4906586660072207,
+          "tokens_per_second": 30.72461378785778
+        },
+        {
+          "id": "eval_119",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.3337974169990048,
+          "tokens_per_second": 31.370846648279397
+        },
+        {
+          "id": "eval_088",
+          "actual": "legit",
+          "raw_score": 0.45,
+          "calibrated_score": 0.4821874908096537,
+          "output": {
+            "danger_level": "suspicious",
+            "score": 0.45,
+            "tactics": [
+              "urgency",
+              "credential_request",
+              "secrecy",
+              "lookalike_link",
+              "relationship_exploit",
+              "off_platform_push",
+              "too_good_to_be_true",
+              "threat",
+              "impersonation",
+              "unusual_payment"
+            ],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "Do not respond, share, or act on this login code.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 2.86935741599882,
+          "tokens_per_second": 30.938257918260383
+        },
+        {
+          "id": "eval_148",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [
+              "urgency",
+              "threat",
+              "impersonation",
+              "unusual_payment",
+              "credential_request",
+              "off_platform_push",
+              "too_good_to_be_true",
+              "secrecy",
+              "lookalike_link",
+              "relationship_exploit"
+            ],
+            "scam_category": "utility_or_billing",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 2.654982707987074,
+          "tokens_per_second": 31.599886240409536
+        },
+        {
+          "id": "eval_037",
+          "actual": "scam",
+          "raw_score": 0.65,
+          "calibrated_score": 0.6972709223552555,
+          "output": {
+            "danger_level": "suspicious",
+            "score": 0.65,
+            "tactics": [
+              "unusual_payment",
+              "too_good_to_be_true",
+              "off_platform_push",
+              "relationship_exploit",
+              "secrecy",
+              "lookalike_link",
+              "impersonation",
+              "credential_request",
+              "threat",
+              "urgency"
+            ],
+            "scam_category": "job_offer",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 2.8990300000295974,
+          "tokens_per_second": 30.98608287428363
+        },
+        {
+          "id": "eval_005",
+          "actual": "scam",
+          "raw_score": 0.95,
+          "calibrated_score": 0.8995974431664575,
+          "output": {
+            "danger_level": "dangerous",
+            "score": 0.95,
+            "tactics": [
+              "urgency",
+              "lookalike_link",
+              "relationship_exploit",
+              "secrecy",
+              "off_platform_push",
+              "unusual_payment",
+              "credential_request",
+              "threat",
+              "impersonation",
+              "too_good_to_be_true"
+            ],
+            "scam_category": "package_delivery",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 2.875562542001717,
+          "tokens_per_second": 30.879582860949238
+        },
+        {
+          "id": "eval_085",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [
+              "secrecy"
+            ],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.6160933749633841,
+          "tokens_per_second": 30.855467846031214
+        },
+        {
+          "id": "eval_091",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [
+              "secrecy"
+            ],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.5209331659716554,
+          "tokens_per_second": 30.716394070858332
+        },
+        {
+          "id": "eval_008",
+          "actual": "scam",
+          "raw_score": 0.95,
+          "calibrated_score": 0.8995974431664575,
+          "output": {
+            "danger_level": "dangerous",
+            "score": 0.95,
+            "tactics": [
+              "impersonation",
+              "credential_request",
+              "urgency",
+              "secrecy",
+              "lookalike_link",
+              "relationship_exploit",
+              "off_platform_push",
+              "too_good_to_be_true",
+              "unusual_payment",
+              "threat"
+            ],
+            "scam_category": "tech_support",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 2.8591952500282787,
+          "tokens_per_second": 31.069834260928165
+        },
+        {
+          "id": "eval_059",
+          "actual": "scam",
+          "raw_score": 0.95,
+          "calibrated_score": 0.8995974431664575,
+          "output": {
+            "danger_level": "dangerous",
+            "score": 0.95,
+            "tactics": [
+              "urgency",
+              "unusual_payment",
+              "threat",
+              "impersonation",
+              "secrecy",
+              "lookalike_link",
+              "relationship_exploit",
+              "off_platform_push",
+              "too_good_to_be_true",
+              "credential_request"
+            ],
+            "scam_category": "utility_or_billing",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 2.881111124996096,
+          "tokens_per_second": 31.186388939031712
+        },
+        {
+          "id": "eval_090",
+          "actual": "legit",
+          "raw_score": 0.65,
+          "calibrated_score": 0.6972709223552555,
+          "output": {
+            "danger_level": "suspicious",
+            "score": 0.65,
+            "tactics": [
+              "credential_request",
+              "impersonation",
+              "secrecy",
+              "urgency",
+              "lookalike_link",
+              "off_platform_push",
+              "relationship_exploit",
+              "too_good_to_be_true",
+              "threat",
+              "unusual_payment"
+            ],
+            "scam_category": "tech_support",
+            "red_flags": [],
+            "recommended_action": "Do not respond, share credentials, or take action based on this message.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.0736697500105947,
+          "tokens_per_second": 30.87251037156663
+        },
+        {
+          "id": "eval_082",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.3383615839993581,
+          "tokens_per_second": 31.25432914694265
+        },
+        {
+          "id": "eval_063",
+          "actual": "scam",
+          "raw_score": 0.65,
+          "calibrated_score": 0.6972709223552555,
+          "output": {
+            "danger_level": "suspicious",
+            "score": 0.65,
+            "tactics": [
+              "threat",
+              "unusual_payment",
+              "impersonation",
+              "secrecy",
+              "urgency",
+              "lookalike_link",
+              "relationship_exploit",
+              "off_platform_push",
+              "too_good_to_be_true",
+              "credential_request"
+            ],
+            "scam_category": "utility_or_billing",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, or follow links. This message uses a threatening tone and requests unusual payment.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.187321958015673,
+          "tokens_per_second": 30.99829344501513
+        },
+        {
+          "id": "eval_079",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [
+              "urgency",
+              "impersonation",
+              "lookalike_link"
+            ],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.7954566670232452,
+          "tokens_per_second": 30.555418056174304
+        },
+        {
+          "id": "eval_132",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [
+              "urgency",
+              "secrecy",
+              "relationship_exploit",
+              "lookalike_link",
+              "unusual_payment",
+              "credential_request",
+              "off_platform_push",
+              "too_good_to_be_true",
+              "impersonation",
+              "threat"
+            ],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 2.6428028339869343,
+          "tokens_per_second": 31.017844525672707
+        },
+        {
+          "id": "eval_081",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [
+              "impersonation",
+              "off_platform_push"
+            ],
+            "scam_category": "utility_or_billing",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.7391348329838365,
+          "tokens_per_second": 30.444219213600448
+        },
+        {
+          "id": "eval_150",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [
+              "lookalike_link"
+            ],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.5648734590504318,
+          "tokens_per_second": 30.65719763269398
+        },
+        {
+          "id": "eval_076",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.3707187920226716,
+          "tokens_per_second": 30.69558688717713
+        },
+        {
+          "id": "eval_001",
+          "actual": "scam",
+          "raw_score": 0.65,
+          "calibrated_score": 0.6972709223552555,
+          "output": {
+            "danger_level": "suspicious",
+            "score": 0.65,
+            "tactics": [
+              "urgency",
+              "lookalike_link",
+              "secrecy",
+              "impersonation",
+              "relationship_exploit",
+              "off_platform_push",
+              "too_good_to_be_true",
+              "unusual_payment",
+              "credential_request",
+              "threat"
+            ],
+            "scam_category": "package_delivery",
+            "red_flags": [],
+            "recommended_action": "Do not respond, follow links, or confirm details.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.001507541979663,
+          "tokens_per_second": 30.41779389635815
+        },
+        {
+          "id": "eval_047",
+          "actual": "scam",
+          "raw_score": 0.95,
+          "calibrated_score": 0.8995974431664575,
+          "output": {
+            "danger_level": "dangerous",
+            "score": 0.95,
+            "tactics": [
+              "too_good_to_be_true",
+              "off_platform_push",
+              "unusual_payment",
+              "lookalike_link",
+              "relationship_exploit",
+              "secrecy",
+              "urgency",
+              "impersonation",
+              "credential_request",
+              "threat"
+            ],
+            "scam_category": "investment_crypto",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 2.9379072089795955,
+          "tokens_per_second": 30.2924519864636
+        },
+        {
+          "id": "eval_007",
+          "actual": "scam",
+          "raw_score": 0.95,
+          "calibrated_score": 0.8995974431664575,
+          "output": {
+            "danger_level": "dangerous",
+            "score": 0.95,
+            "tactics": [
+              "impersonation",
+              "credential_request",
+              "lookalike_link",
+              "urgency",
+              "secrecy",
+              "unusual_payment",
+              "relationship_exploit",
+              "threat",
+              "off_platform_push",
+              "too_good_to_be_true"
+            ],
+            "scam_category": "bank_alert",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.0389711250318214,
+          "tokens_per_second": 30.36989446823219
+        },
+        {
+          "id": "eval_013",
+          "actual": "scam",
+          "raw_score": 0.95,
+          "calibrated_score": 0.8995974431664575,
+          "output": {
+            "danger_level": "dangerous",
+            "score": 0.95,
+            "tactics": [
+              "threat",
+              "unusual_payment",
+              "impersonation",
+              "secrecy",
+              "lookalike_link",
+              "relationship_exploit",
+              "off_platform_push",
+              "too_good_to_be_true",
+              "urgency",
+              "credential_request"
+            ],
+            "scam_category": "government_impersonation",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 2.98920095898211,
+          "tokens_per_second": 30.46978743425966
+        },
+        {
+          "id": "eval_054",
+          "actual": "scam",
+          "raw_score": 0.65,
+          "calibrated_score": 0.6972709223552555,
+          "output": {
+            "danger_level": "suspicious",
+            "score": 0.65,
+            "tactics": [
+              "unusual_payment",
+              "off_platform_push",
+              "secrecy",
+              "relationship_exploit",
+              "lookalike_link",
+              "impersonation",
+              "credential_request",
+              "urgency",
+              "threat",
+              "too_good_to_be_true"
+            ],
+            "scam_category": "marketplace",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 2.9965370419668034,
+          "tokens_per_second": 30.004069963843328
+        },
+        {
+          "id": "eval_075",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [
+              "impersonation"
+            ],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.5599646250484511,
+          "tokens_per_second": 30.10895139124862
+        },
+        {
+          "id": "eval_050",
+          "actual": "scam",
+          "raw_score": 0.95,
+          "calibrated_score": 0.8995974431664575,
+          "output": {
+            "danger_level": "dangerous",
+            "score": 0.95,
+            "tactics": [
+              "too_good_to_be_true",
+              "unusual_payment",
+              "off_platform_push",
+              "relationship_exploit",
+              "secrecy",
+              "lookalike_link",
+              "impersonation",
+              "urgency",
+              "threat",
+              "credential_request"
+            ],
+            "scam_category": "investment_crypto",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.0678835419821553,
+          "tokens_per_second": 30.168826910306283
+        },
+        {
+          "id": "eval_100",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [],
+            "scam_category": "package_delivery",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.4219838329590857,
+          "tokens_per_second": 30.20655720764226
+        },
+        {
+          "id": "eval_113",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.379423875012435,
+          "tokens_per_second": 30.519189146386527
+        },
+        {
+          "id": "eval_096",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.3775379169965163,
+          "tokens_per_second": 30.480923061207342
+        },
+        {
+          "id": "eval_125",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [
+              "urgency"
+            ],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.5539607079699636,
+          "tokens_per_second": 29.582575430155902
+        },
+        {
+          "id": "eval_022",
+          "actual": "scam",
+          "raw_score": 0.65,
+          "calibrated_score": 0.6972709223552555,
+          "output": {
+            "danger_level": "suspicious",
+            "score": 0.65,
+            "tactics": [
+              "urgency",
+              "impersonation",
+              "credential_request",
+              "off_platform_push",
+              "lookalike_link",
+              "secrecy",
+              "relationship_exploit",
+              "too_good_to_be_true",
+              "unusual_payment",
+              "threat"
+            ],
+            "scam_category": "tech_support",
+            "red_flags": [],
+            "recommended_action": "Do not respond, enable remote control, or follow links.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 2.965243707993068,
+          "tokens_per_second": 30.01007481082935
+        },
+        {
+          "id": "eval_118",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.3915719999931753,
+          "tokens_per_second": 30.12418491690203
+        },
+        {
+          "id": "eval_099",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.5697871670126915,
+          "tokens_per_second": 26.22337353069375
+        },
+        {
+          "id": "eval_043",
+          "actual": "scam",
+          "raw_score": 0.95,
+          "calibrated_score": 0.8995974431664575,
+          "output": {
+            "danger_level": "dangerous",
+            "score": 0.95,
+            "tactics": [
+              "urgency",
+              "too_good_to_be_true",
+              "unusual_payment",
+              "secrecy",
+              "lookalike_link",
+              "relationship_exploit",
+              "impersonation",
+              "off_platform_push",
+              "credential_request",
+              "threat"
+            ],
+            "scam_category": "prize_or_lottery",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.174273999989964,
+          "tokens_per_second": 29.023857610956206
+        },
+        {
+          "id": "eval_014",
+          "actual": "scam",
+          "raw_score": 0.95,
+          "calibrated_score": 0.8995974431664575,
+          "output": {
+            "danger_level": "dangerous",
+            "score": 0.95,
+            "tactics": [
+              "urgency",
+              "threat",
+              "unusual_payment",
+              "impersonation",
+              "secrecy",
+              "lookalike_link",
+              "relationship_exploit",
+              "off_platform_push",
+              "too_good_to_be_true",
+              "credential_request"
+            ],
+            "scam_category": "government_impersonation",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.046916291990783,
+          "tokens_per_second": 29.807767626962026
+        },
+        {
+          "id": "eval_044",
+          "actual": "scam",
+          "raw_score": 0.95,
+          "calibrated_score": 0.8995974431664575,
+          "output": {
+            "danger_level": "dangerous",
+            "score": 0.95,
+            "tactics": [
+              "too_good_to_be_true",
+              "unusual_payment",
+              "lookalike_link",
+              "secrecy",
+              "relationship_exploit",
+              "impersonation",
+              "off_platform_push",
+              "urgency",
+              "threat",
+              "credential_request"
+            ],
+            "scam_category": "prize_or_lottery",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.147545750020072,
+          "tokens_per_second": 29.146880848221137
+        },
+        {
+          "id": "eval_030",
+          "actual": "scam",
+          "raw_score": 0.95,
+          "calibrated_score": 0.8995974431664575,
+          "output": {
+            "danger_level": "dangerous",
+            "score": 0.95,
+            "tactics": [
+              "relationship_exploit",
+              "secrecy",
+              "unusual_payment",
+              "urgency",
+              "impersonation",
+              "off_platform_push",
+              "lookalike_link",
+              "threat",
+              "credential_request",
+              "too_good_to_be_true"
+            ],
+            "scam_category": "family_emergency",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.0749997079838067,
+          "tokens_per_second": 29.297302476725015
+        },
+        {
+          "id": "eval_107",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.4369831249932759,
+          "tokens_per_second": 29.2440184126663
+        },
+        {
+          "id": "eval_112",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.4125103330006823,
+          "tokens_per_second": 29.71918582282385
+        },
+        {
+          "id": "eval_117",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.4155487089883536,
+          "tokens_per_second": 29.75553814901252
+        },
+        {
+          "id": "eval_110",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.424689290986862,
+          "tokens_per_second": 29.481202546219755
+        },
+        {
+          "id": "eval_048",
+          "actual": "scam",
+          "raw_score": 0.95,
+          "calibrated_score": 0.8995974431664575,
+          "output": {
+            "danger_level": "dangerous",
+            "score": 0.95,
+            "tactics": [
+              "too_good_to_be_true",
+              "unusual_payment",
+              "off_platform_push",
+              "lookalike_link",
+              "relationship_exploit",
+              "secrecy",
+              "urgency",
+              "impersonation",
+              "credential_request",
+              "threat"
+            ],
+            "scam_category": "investment_crypto",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.036467582976911,
+          "tokens_per_second": 29.267079169888078
+        },
+        {
+          "id": "eval_115",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.4299049159744754,
+          "tokens_per_second": 29.422195786423483
+        },
+        {
+          "id": "eval_065",
+          "actual": "scam",
+          "raw_score": 0.65,
+          "calibrated_score": 0.6972709223552555,
+          "output": {
+            "danger_level": "suspicious",
+            "score": 0.65,
+            "tactics": [
+              "urgency",
+              "lookalike_link",
+              "unusual_payment",
+              "threat",
+              "impersonation",
+              "secrecy",
+              "relationship_exploit",
+              "off_platform_push",
+              "too_good_to_be_true",
+              "credential_request"
+            ],
+            "scam_category": "utility_or_billing",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.2593934580218047,
+          "tokens_per_second": 29.105628046995434
+        },
+        {
+          "id": "eval_147",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.451586875016801,
+          "tokens_per_second": 28.9904582216156
+        },
+        {
+          "id": "eval_095",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.4455071249976754,
+          "tokens_per_second": 29.098458961342306
+        },
+        {
+          "id": "eval_018",
+          "actual": "scam",
+          "raw_score": 0.65,
+          "calibrated_score": 0.6972709223552555,
+          "output": {
+            "danger_level": "suspicious",
+            "score": 0.65,
+            "tactics": [
+              "threat",
+              "urgency",
+              "unusual_payment",
+              "secrecy",
+              "lookalike_link",
+              "relationship_exploit",
+              "off_platform_push",
+              "too_good_to_be_true",
+              "credential_request",
+              "impersonation"
+            ],
+            "scam_category": "utility_or_billing",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, or take any action based on this message.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.275441875040997,
+          "tokens_per_second": 28.41006310262425
+        },
+        {
+          "id": "eval_070",
+          "actual": "scam",
+          "raw_score": 0.95,
+          "calibrated_score": 0.8995974431664575,
+          "output": {
+            "danger_level": "dangerous",
+            "score": 0.95,
+            "tactics": [
+              "urgency",
+              "unusual_payment",
+              "secrecy",
+              "impersonation",
+              "threat",
+              "lookalike_link",
+              "relationship_exploit",
+              "off_platform_push",
+              "too_good_to_be_true",
+              "credential_request"
+            ],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.219073500018567,
+          "tokens_per_second": 27.33043850206806
+        },
+        {
+          "id": "eval_092",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [
+              "secrecy"
+            ],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.7362729160231538,
+          "tokens_per_second": 27.182653842494645
+        },
+        {
+          "id": "eval_093",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [
+              "urgency",
+              "secrecy",
+              "lookalike_link",
+              "relationship_exploit",
+              "off_platform_push",
+              "too_good_to_be_true",
+              "unusual_payment",
+              "credential_request",
+              "threat",
+              "impersonation"
+            ],
+            "scam_category": "package_delivery",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 2.995008666010108,
+          "tokens_per_second": 27.676445322521072
+        },
+        {
+          "id": "eval_039",
+          "actual": "scam",
+          "raw_score": 0.95,
+          "calibrated_score": 0.8995974431664575,
+          "output": {
+            "danger_level": "dangerous",
+            "score": 0.95,
+            "tactics": [
+              "unusual_payment",
+              "urgency",
+              "relationship_exploit",
+              "secrecy",
+              "lookalike_link",
+              "off_platform_push",
+              "too_good_to_be_true",
+              "impersonation",
+              "credential_request",
+              "threat"
+            ],
+            "scam_category": "marketplace",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.3502270840108395,
+          "tokens_per_second": 26.63507662023708
+        },
+        {
+          "id": "eval_053",
+          "actual": "scam",
+          "raw_score": 0.65,
+          "calibrated_score": 0.6972709223552555,
+          "output": {
+            "danger_level": "suspicious",
+            "score": 0.65,
+            "tactics": [
+              "off_platform_push",
+              "unusual_payment",
+              "secrecy",
+              "relationship_exploit",
+              "lookalike_link",
+              "urgency",
+              "threat",
+              "impersonation",
+              "credential_request",
+              "too_good_to_be_true"
+            ],
+            "scam_category": "marketplace",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.444523374957498,
+          "tokens_per_second": 26.154916493505734
+        },
+        {
+          "id": "eval_021",
+          "actual": "scam",
+          "raw_score": 0.65,
+          "calibrated_score": 0.6972709223552555,
+          "output": {
+            "danger_level": "suspicious",
+            "score": 0.65,
+            "tactics": [
+              "impersonation",
+              "urgency",
+              "credential_request",
+              "secrecy",
+              "lookalike_link",
+              "relationship_exploit",
+              "off_platform_push",
+              "too_good_to_be_true",
+              "unusual_payment",
+              "threat"
+            ],
+            "scam_category": "tech_support",
+            "red_flags": [],
+            "recommended_action": "Do not respond, share credentials, or follow any instructions.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.548565333010629,
+          "tokens_per_second": 26.20235265933604
+        },
+        {
+          "id": "eval_028",
+          "actual": "scam",
+          "raw_score": 0.95,
+          "calibrated_score": 0.8995974431664575,
+          "output": {
+            "danger_level": "dangerous",
+            "score": 0.95,
+            "tactics": [
+              "unusual_payment",
+              "secrecy",
+              "relationship_exploit",
+              "lookalike_link",
+              "urgency",
+              "threat",
+              "impersonation",
+              "credential_request",
+              "off_platform_push",
+              "too_good_to_be_true"
+            ],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.4406852910178714,
+          "tokens_per_second": 25.655133190323998
+        },
+        {
+          "id": "eval_031",
+          "actual": "scam",
+          "raw_score": 0.95,
+          "calibrated_score": 0.8995974431664575,
+          "output": {
+            "danger_level": "dangerous",
+            "score": 0.95,
+            "tactics": [
+              "relationship_exploit",
+              "secrecy",
+              "unusual_payment",
+              "urgency",
+              "threat",
+              "impersonation",
+              "lookalike_link",
+              "off_platform_push",
+              "too_good_to_be_true",
+              "credential_request"
+            ],
+            "scam_category": "family_emergency",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.5713887499878183,
+          "tokens_per_second": 25.227282980072225
+        },
+        {
+          "id": "eval_009",
+          "actual": "scam",
+          "raw_score": 0.65,
+          "calibrated_score": 0.6972709223552555,
+          "output": {
+            "danger_level": "suspicious",
+            "score": 0.65,
+            "tactics": [
+              "urgency",
+              "lookalike_link",
+              "impersonation",
+              "secrecy",
+              "relationship_exploit",
+              "off_platform_push",
+              "too_good_to_be_true",
+              "unusual_payment",
+              "credential_request",
+              "threat"
+            ],
+            "scam_category": "bank_alert",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.7139011250110343,
+          "tokens_per_second": 25.281539687407143
+        },
+        {
+          "id": "eval_032",
+          "actual": "scam",
+          "raw_score": 0.95,
+          "calibrated_score": 0.8995974431664575,
+          "output": {
+            "danger_level": "dangerous",
+            "score": 0.95,
+            "tactics": [
+              "relationship_exploit",
+              "unusual_payment",
+              "urgency",
+              "secrecy",
+              "lookalike_link",
+              "off_platform_push",
+              "credential_request",
+              "threat",
+              "impersonation",
+              "too_good_to_be_true"
+            ],
+            "scam_category": "family_emergency",
+            "red_flags": [],
+            "recommended_action": "Do not respond, pay, follow links, or share credentials.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 3.6831614999682643,
+          "tokens_per_second": 24.431879751461672
+        },
+        {
+          "id": "eval_097",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [
+              "urgency"
+            ],
+            "scam_category": "package_delivery",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.9203554170089774,
+          "tokens_per_second": 24.47090409503101
+        },
+        {
+          "id": "eval_126",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.8343593750032596,
+          "tokens_per_second": 22.78986085250094
+        },
+        {
+          "id": "eval_108",
+          "actual": "legit",
+          "raw_score": 0.05,
+          "calibrated_score": 0.13210059184089573,
+          "output": {
+            "danger_level": "safe",
+            "score": 0.05,
+            "tactics": [],
+            "scam_category": "other",
+            "red_flags": [],
+            "recommended_action": "No protective action is needed.",
+            "legit_signals": []
+          },
+          "error": null,
+          "attempts": 1,
+          "latency_seconds": 1.5994892090093344,
+          "tokens_per_second": 26.343913381212804
+        }
+      ]
+    },
+    {
+      "name": "always_scam",
+      "metrics": {
+        "threshold": 0.5,
+        "precision": 0.4666666666666667,
+        "recall": 1.0,
+        "f1": 0.6363636363636364,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0.0,
+        "accuracy": 0.4666666666666667,
+        "confusion_matrix": {
+          "tn": 0,
+          "fp": 32,
+          "fn": 0,
+          "tp": 28
+        }
+      },
+      "threshold_sweep": {
+        "max_false_positive_rate": 0.05,
+        "recommended": {
+          "threshold": 1.0000000000000002,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0
+        },
+        "points": [
+          {
+            "threshold": 0.0,
+            "precision": 0.4666666666666667,
+            "recall": 1.0,
+            "f1": 0.6363636363636364,
+            "false_positive_rate": 1.0
+          },
+          {
+            "threshold": 1.0,
+            "precision": 0.4666666666666667,
+            "recall": 1.0,
+            "f1": 0.6363636363636364,
+            "false_positive_rate": 1.0
+          },
+          {
+            "threshold": 1.0000000000000002,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "false_positive_rate": 0.0
+          }
+        ],
+        "precision_recall_curve": [
+          {
+            "precision": 0.4666666666666667,
+            "recall": 1.0,
+            "threshold": 1.0
+          }
+        ]
+      },
+      "per_category": {
+        "bank_alert": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 3
+          },
+          "count": 3
+        },
+        "family_emergency": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 3
+          },
+          "count": 3
+        },
+        "government_impersonation": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 3
+          },
+          "count": 3
+        },
+        "investment_crypto": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 3
+          },
+          "count": 3
+        },
+        "job_offer": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 2
+        },
+        "marketplace": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 2
+        },
+        "other": {
+          "threshold": 0.5,
+          "precision": 0.058823529411764705,
+          "recall": 1.0,
+          "f1": 0.1111111111111111,
+          "false_positive_rate": 1.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 0.058823529411764705,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 32,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 34
+        },
+        "package_delivery": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 2
+        },
+        "prize_or_lottery": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 2
+        },
+        "romance": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 2
+        },
+        "tech_support": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 2
+        },
+        "utility_or_billing": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 2
+        }
+      },
+      "per_channel": {
+        "chat": {
+          "threshold": 0.5,
+          "precision": 0.5833333333333334,
+          "recall": 1.0,
+          "f1": 0.7368421052631579,
+          "false_positive_rate": 1.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 0.5833333333333334,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 5,
+            "fn": 0,
+            "tp": 7
+          },
+          "count": 12
+        },
+        "email": {
+          "threshold": 0.5,
+          "precision": 0.42105263157894735,
+          "recall": 1.0,
+          "f1": 0.5925925925925926,
+          "false_positive_rate": 1.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 0.42105263157894735,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 11,
+            "fn": 0,
+            "tp": 8
+          },
+          "count": 19
+        },
+        "other": {
+          "threshold": 0.5,
+          "precision": 0.4,
+          "recall": 1.0,
+          "f1": 0.5714285714285715,
+          "false_positive_rate": 1.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 0.4,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 3,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 5
+        },
+        "sms": {
+          "threshold": 0.5,
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "false_positive_rate": 1.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 0.3333333333333333,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 12,
+            "fn": 0,
+            "tp": 6
+          },
+          "count": 18
+        },
+        "social": {
+          "threshold": 0.5,
+          "precision": 0.8333333333333334,
+          "recall": 1.0,
+          "f1": 0.9090909090909091,
+          "false_positive_rate": 1.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 0.8333333333333334,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 1,
+            "fn": 0,
+            "tp": 5
+          },
+          "count": 6
+        }
+      },
+      "tactic_metrics": null,
+      "misclassified": [
+        {
+          "id": "eval_135",
+          "text": "The client moved tomorrow's deadline forward. Reply in this thread with your realistic estimate.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_119",
+          "text": "Your restaurant pickup will be ready at 6:20 PM under the name Customer.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_088",
+          "text": "Login code: 609477. It expires in five minutes and cannot be reused.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_148",
+          "text": "Reminder: utility crews will test alarms at noon. Your service will not be disconnected.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_085",
+          "text": "Verification code: 306144. If you did not request it, ignore this message and change your password in the app.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_091",
+          "text": "Two-step verification code: 912700. Keep it private.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_090",
+          "text": "Use code 811699 to approve your own sign-in. If this was not you, deny the request in the app.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_082",
+          "text": "Your monthly statement is ready. Use your saved bookmark or mobile app to view it.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_079",
+          "text": "Fraud monitor declined a $410 purchase. Open your bank app directly if you made it.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_132",
+          "text": "The smoke alarm is chirping again. Please pick up batteries on your way home.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_081",
+          "text": "A recurring subscription charged $12.99 today. Manage merchants inside your banking app.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_150",
+          "text": "Your friend shared a photo album at https://photos.example.org/family; the link was created from your shared account.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_076",
+          "text": "Deposit confirmed: $620.00 was added to checking. This automated message cannot accept replies.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_075",
+          "text": "Your balance fell below the alert level you selected. Sign in through your usual app to review activity.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_100",
+          "text": "Package 2253 is moving through the regional facility and remains on schedule.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_113",
+          "text": "Order confirmed: two notebooks, total $18.42. We will email again when it ships.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_096",
+          "text": "Courier update: weather delayed today's route. A new delivery estimate will appear tomorrow.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_125",
+          "text": "Urgent: the basement pipe is leaking. I shut off the water; please bring towels when you get home.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_118",
+          "text": "Thanks for your purchase. Your digital receipt is attached; no reply is needed.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_099",
+          "text": "Delivery attempt missed. Reschedule from the retailer app where you placed the order.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_107",
+          "text": "Your parent-teacher conference is Thursday at 4:15 PM in room 204.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_112",
+          "text": "Reminder from the library: your study room reservation begins in 30 minutes.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_117",
+          "text": "Order 7314 has shipped. The delivery address matches the one saved during checkout.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_110",
+          "text": "Your annual checkup is next week. Complete forms in the clinic app before arrival.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_115",
+          "text": "Receipt for your bookstore purchase: $31.70 paid with the card ending 0142.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_147",
+          "text": "School is closed today because of ice. Updates will be posted on the district's usual channel.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_095",
+          "text": "Your order shipped and is expected Tuesday. Track it from your original order confirmation.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_092",
+          "text": "Code 013811 was requested for your account. Ignore it if you did not initiate a login.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_093",
+          "text": "Your package is out for delivery today between 2 and 5 PM. No signature is required.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_097",
+          "text": "A signature will be required for tomorrow's delivery. No payment is due.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_126",
+          "text": "I am at the clinic with Grandma. She is stable, and I will call after the doctor finishes.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        },
+        {
+          "id": "eval_108",
+          "text": "Haircut appointment confirmed for Saturday at 10 AM. No deposit is due.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 1.0
+        }
+      ],
+      "confidence_intervals_95": {
+        "precision": {
+          "low": 0.34627701540988,
+          "high": 0.5910679132886489
+        },
+        "recall": {
+          "low": 0.8793527963418923,
+          "high": 1.0
+        },
+        "false_positive_rate": {
+          "low": 0.8928172849426366,
+          "high": 1.0
+        }
+      }
+    },
+    {
+      "name": "random_seed_0",
+      "metrics": {
+        "threshold": 0.5,
+        "precision": 0.45714285714285713,
+        "recall": 0.5714285714285714,
+        "f1": 0.5079365079365079,
+        "false_positive_rate": 0.59375,
+        "false_negative_rate": 0.42857142857142855,
+        "accuracy": 0.48333333333333334,
+        "confusion_matrix": {
+          "tn": 13,
+          "fp": 19,
+          "fn": 12,
+          "tp": 16
+        }
+      },
+      "threshold_sweep": {
+        "max_false_positive_rate": 0.05,
+        "recommended": {
+          "threshold": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0
+        },
+        "points": [
+          {
+            "threshold": 0.0,
+            "precision": 0.4666666666666667,
+            "recall": 1.0,
+            "f1": 0.6363636363636364,
+            "false_positive_rate": 1.0
+          },
+          {
+            "threshold": 0.0011428193144282783,
+            "precision": 0.4666666666666667,
+            "recall": 1.0,
+            "f1": 0.6363636363636364,
+            "false_positive_rate": 1.0
+          },
+          {
+            "threshold": 0.014041700164018955,
+            "precision": 0.4745762711864407,
+            "recall": 1.0,
+            "f1": 0.6436781609195402,
+            "false_positive_rate": 0.96875
+          },
+          {
+            "threshold": 0.08044581855253541,
+            "precision": 0.46551724137931033,
+            "recall": 0.9642857142857143,
+            "f1": 0.627906976744186,
+            "false_positive_rate": 0.96875
+          },
+          {
+            "threshold": 0.1007012080683658,
+            "precision": 0.45614035087719296,
+            "recall": 0.9285714285714286,
+            "f1": 0.611764705882353,
+            "false_positive_rate": 0.96875
+          },
+          {
+            "threshold": 0.10905784593110368,
+            "precision": 0.44642857142857145,
+            "recall": 0.8928571428571429,
+            "f1": 0.5952380952380952,
+            "false_positive_rate": 0.96875
+          },
+          {
+            "threshold": 0.19106709150239054,
+            "precision": 0.43636363636363634,
+            "recall": 0.8571428571428571,
+            "f1": 0.5783132530120482,
+            "false_positive_rate": 0.96875
+          },
+          {
+            "threshold": 0.23861592861522019,
+            "precision": 0.42592592592592593,
+            "recall": 0.8214285714285714,
+            "f1": 0.5609756097560976,
+            "false_positive_rate": 0.96875
+          },
+          {
+            "threshold": 0.24391087688713198,
+            "precision": 0.4339622641509434,
+            "recall": 0.8214285714285714,
+            "f1": 0.5679012345679013,
+            "false_positive_rate": 0.9375
+          },
+          {
+            "threshold": 0.25050634136244054,
+            "precision": 0.4230769230769231,
+            "recall": 0.7857142857142857,
+            "f1": 0.55,
+            "false_positive_rate": 0.9375
+          },
+          {
+            "threshold": 0.25891675029296335,
+            "precision": 0.43137254901960786,
+            "recall": 0.7857142857142857,
+            "f1": 0.5569620253164557,
+            "false_positive_rate": 0.90625
+          },
+          {
+            "threshold": 0.2604923103919594,
+            "precision": 0.44,
+            "recall": 0.7857142857142857,
+            "f1": 0.5641025641025641,
+            "false_positive_rate": 0.875
+          },
+          {
+            "threshold": 0.28183784439970383,
+            "precision": 0.4489795918367347,
+            "recall": 0.7857142857142857,
+            "f1": 0.5714285714285714,
+            "false_positive_rate": 0.84375
+          },
+          {
+            "threshold": 0.30331272607892745,
+            "precision": 0.4583333333333333,
+            "recall": 0.7857142857142857,
+            "f1": 0.5789473684210527,
+            "false_positive_rate": 0.8125
+          },
+          {
+            "threshold": 0.3101475693193326,
+            "precision": 0.46808510638297873,
+            "recall": 0.7857142857142857,
+            "f1": 0.5866666666666668,
+            "false_positive_rate": 0.78125
+          },
+          {
+            "threshold": 0.32005460467254576,
+            "precision": 0.45652173913043476,
+            "recall": 0.75,
+            "f1": 0.5675675675675675,
+            "false_positive_rate": 0.78125
+          },
+          {
+            "threshold": 0.32520436274739006,
+            "precision": 0.4444444444444444,
+            "recall": 0.7142857142857143,
+            "f1": 0.5479452054794521,
+            "false_positive_rate": 0.78125
+          },
+          {
+            "threshold": 0.39882354222426875,
+            "precision": 0.45454545454545453,
+            "recall": 0.7142857142857143,
+            "f1": 0.5555555555555556,
+            "false_positive_rate": 0.75
+          },
+          {
+            "threshold": 0.4049341374504143,
+            "precision": 0.46511627906976744,
+            "recall": 0.7142857142857143,
+            "f1": 0.5633802816901409,
+            "false_positive_rate": 0.71875
+          },
+          {
+            "threshold": 0.420571580830845,
+            "precision": 0.4523809523809524,
+            "recall": 0.6785714285714286,
+            "f1": 0.5428571428571429,
+            "false_positive_rate": 0.71875
+          },
+          {
+            "threshold": 0.4341718354537837,
+            "precision": 0.4634146341463415,
+            "recall": 0.6785714285714286,
+            "f1": 0.5507246376811594,
+            "false_positive_rate": 0.6875
+          },
+          {
+            "threshold": 0.44796957143557037,
+            "precision": 0.475,
+            "recall": 0.6785714285714286,
+            "f1": 0.5588235294117648,
+            "false_positive_rate": 0.65625
+          },
+          {
+            "threshold": 0.47214271545271336,
+            "precision": 0.46153846153846156,
+            "recall": 0.6428571428571429,
+            "f1": 0.537313432835821,
+            "false_positive_rate": 0.65625
+          },
+          {
+            "threshold": 0.4765969541523558,
+            "precision": 0.47368421052631576,
+            "recall": 0.6428571428571429,
+            "f1": 0.5454545454545454,
+            "false_positive_rate": 0.625
+          },
+          {
+            "threshold": 0.47700977655271704,
+            "precision": 0.4864864864864865,
+            "recall": 0.6428571428571429,
+            "f1": 0.5538461538461539,
+            "false_positive_rate": 0.59375
+          },
+          {
+            "threshold": 0.49357786646532464,
+            "precision": 0.4722222222222222,
+            "recall": 0.6071428571428571,
+            "f1": 0.53125,
+            "false_positive_rate": 0.59375
+          },
+          {
+            "threshold": 0.5046868558173903,
+            "precision": 0.45714285714285713,
+            "recall": 0.5714285714285714,
+            "f1": 0.5079365079365079,
+            "false_positive_rate": 0.59375
+          },
+          {
+            "threshold": 0.5079406425205739,
+            "precision": 0.47058823529411764,
+            "recall": 0.5714285714285714,
+            "f1": 0.5161290322580646,
+            "false_positive_rate": 0.5625
+          },
+          {
+            "threshold": 0.5112747213686085,
+            "precision": 0.45454545454545453,
+            "recall": 0.5357142857142857,
+            "f1": 0.49180327868852464,
+            "false_positive_rate": 0.5625
+          },
+          {
+            "threshold": 0.5474409113284238,
+            "precision": 0.46875,
+            "recall": 0.5357142857142857,
+            "f1": 0.5,
+            "false_positive_rate": 0.53125
+          },
+          {
+            "threshold": 0.5486993038355893,
+            "precision": 0.4838709677419355,
+            "recall": 0.5357142857142857,
+            "f1": 0.5084745762711865,
+            "false_positive_rate": 0.5
+          },
+          {
+            "threshold": 0.5512672460905512,
+            "precision": 0.4666666666666667,
+            "recall": 0.5,
+            "f1": 0.4827586206896552,
+            "false_positive_rate": 0.5
+          },
+          {
+            "threshold": 0.5675107406206719,
+            "precision": 0.4827586206896552,
+            "recall": 0.5,
+            "f1": 0.49122807017543857,
+            "false_positive_rate": 0.46875
+          },
+          {
+            "threshold": 0.5833820394550312,
+            "precision": 0.4642857142857143,
+            "recall": 0.4642857142857143,
+            "f1": 0.4642857142857143,
+            "false_positive_rate": 0.46875
+          },
+          {
+            "threshold": 0.6108869734438016,
+            "precision": 0.4444444444444444,
+            "recall": 0.42857142857142855,
+            "f1": 0.43636363636363634,
+            "false_positive_rate": 0.46875
+          },
+          {
+            "threshold": 0.6183689966753316,
+            "precision": 0.46153846153846156,
+            "recall": 0.42857142857142855,
+            "f1": 0.4444444444444445,
+            "false_positive_rate": 0.4375
+          },
+          {
+            "threshold": 0.6681532012318508,
+            "precision": 0.48,
+            "recall": 0.42857142857142855,
+            "f1": 0.4528301886792452,
+            "false_positive_rate": 0.40625
+          },
+          {
+            "threshold": 0.6839839319154413,
+            "precision": 0.5,
+            "recall": 0.42857142857142855,
+            "f1": 0.4615384615384615,
+            "false_positive_rate": 0.375
+          },
+          {
+            "threshold": 0.7065614098668896,
+            "precision": 0.4782608695652174,
+            "recall": 0.39285714285714285,
+            "f1": 0.4313725490196078,
+            "false_positive_rate": 0.375
+          },
+          {
+            "threshold": 0.7197046864039541,
+            "precision": 0.5,
+            "recall": 0.39285714285714285,
+            "f1": 0.44,
+            "false_positive_rate": 0.34375
+          },
+          {
+            "threshold": 0.7298317482601286,
+            "precision": 0.47619047619047616,
+            "recall": 0.35714285714285715,
+            "f1": 0.40816326530612246,
+            "false_positive_rate": 0.34375
+          },
+          {
+            "threshold": 0.7558042041572239,
+            "precision": 0.45,
+            "recall": 0.32142857142857145,
+            "f1": 0.375,
+            "false_positive_rate": 0.34375
+          },
+          {
+            "threshold": 0.7579544029403025,
+            "precision": 0.42105263157894735,
+            "recall": 0.2857142857142857,
+            "f1": 0.3404255319148936,
+            "false_positive_rate": 0.34375
+          },
+          {
+            "threshold": 0.7837985890347726,
+            "precision": 0.4444444444444444,
+            "recall": 0.2857142857142857,
+            "f1": 0.34782608695652173,
+            "false_positive_rate": 0.3125
+          },
+          {
+            "threshold": 0.80317946927987,
+            "precision": 0.4117647058823529,
+            "recall": 0.25,
+            "f1": 0.3111111111111111,
+            "false_positive_rate": 0.3125
+          },
+          {
+            "threshold": 0.8050278270130223,
+            "precision": 0.375,
+            "recall": 0.21428571428571427,
+            "f1": 0.2727272727272727,
+            "false_positive_rate": 0.3125
+          },
+          {
+            "threshold": 0.8102172359965896,
+            "precision": 0.3333333333333333,
+            "recall": 0.17857142857142858,
+            "f1": 0.23255813953488372,
+            "false_positive_rate": 0.3125
+          },
+          {
+            "threshold": 0.824844977148233,
+            "precision": 0.35714285714285715,
+            "recall": 0.17857142857142858,
+            "f1": 0.2380952380952381,
+            "false_positive_rate": 0.28125
+          },
+          {
+            "threshold": 0.8444218515250481,
+            "precision": 0.38461538461538464,
+            "recall": 0.17857142857142858,
+            "f1": 0.24390243902439027,
+            "false_positive_rate": 0.25
+          },
+          {
+            "threshold": 0.8653099277716401,
+            "precision": 0.3333333333333333,
+            "recall": 0.14285714285714285,
+            "f1": 0.2,
+            "false_positive_rate": 0.25
+          },
+          {
+            "threshold": 0.8676027754927809,
+            "precision": 0.36363636363636365,
+            "recall": 0.14285714285714285,
+            "f1": 0.2051282051282051,
+            "false_positive_rate": 0.21875
+          },
+          {
+            "threshold": 0.8704712321086546,
+            "precision": 0.4,
+            "recall": 0.14285714285714285,
+            "f1": 0.21052631578947364,
+            "false_positive_rate": 0.1875
+          },
+          {
+            "threshold": 0.8988382879679935,
+            "precision": 0.4444444444444444,
+            "recall": 0.14285714285714285,
+            "f1": 0.21621621621621623,
+            "false_positive_rate": 0.15625
+          },
+          {
+            "threshold": 0.9021659504395827,
+            "precision": 0.375,
+            "recall": 0.10714285714285714,
+            "f1": 0.16666666666666666,
+            "false_positive_rate": 0.15625
+          },
+          {
+            "threshold": 0.9081128851953352,
+            "precision": 0.2857142857142857,
+            "recall": 0.07142857142857142,
+            "f1": 0.1142857142857143,
+            "false_positive_rate": 0.15625
+          },
+          {
+            "threshold": 0.9097462559682401,
+            "precision": 0.16666666666666666,
+            "recall": 0.03571428571428571,
+            "f1": 0.058823529411764705,
+            "false_positive_rate": 0.15625
+          },
+          {
+            "threshold": 0.9130110532378982,
+            "precision": 0.2,
+            "recall": 0.03571428571428571,
+            "f1": 0.06060606060606061,
+            "false_positive_rate": 0.125
+          },
+          {
+            "threshold": 0.9328338242269067,
+            "precision": 0.25,
+            "recall": 0.03571428571428571,
+            "f1": 0.0625,
+            "false_positive_rate": 0.09375
+          },
+          {
+            "threshold": 0.9666063677707588,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "false_positive_rate": 0.09375
+          },
+          {
+            "threshold": 0.9675402502901433,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "false_positive_rate": 0.0625
+          },
+          {
+            "threshold": 0.9827854760376531,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "false_positive_rate": 0.03125
+          },
+          {
+            "threshold": 0.9827854760376532,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "false_positive_rate": 0.0
+          },
+          {
+            "threshold": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "false_positive_rate": 0.0
+          }
+        ],
+        "precision_recall_curve": [
+          {
+            "precision": 0.4666666666666667,
+            "recall": 1.0,
+            "threshold": 0.0011428193144282783
+          },
+          {
+            "precision": 0.4745762711864407,
+            "recall": 1.0,
+            "threshold": 0.014041700164018955
+          },
+          {
+            "precision": 0.46551724137931033,
+            "recall": 0.9642857142857143,
+            "threshold": 0.08044581855253541
+          },
+          {
+            "precision": 0.45614035087719296,
+            "recall": 0.9285714285714286,
+            "threshold": 0.1007012080683658
+          },
+          {
+            "precision": 0.44642857142857145,
+            "recall": 0.8928571428571429,
+            "threshold": 0.10905784593110368
+          },
+          {
+            "precision": 0.43636363636363634,
+            "recall": 0.8571428571428571,
+            "threshold": 0.19106709150239054
+          },
+          {
+            "precision": 0.42592592592592593,
+            "recall": 0.8214285714285714,
+            "threshold": 0.23861592861522019
+          },
+          {
+            "precision": 0.4339622641509434,
+            "recall": 0.8214285714285714,
+            "threshold": 0.24391087688713198
+          },
+          {
+            "precision": 0.4230769230769231,
+            "recall": 0.7857142857142857,
+            "threshold": 0.25050634136244054
+          },
+          {
+            "precision": 0.43137254901960786,
+            "recall": 0.7857142857142857,
+            "threshold": 0.25891675029296335
+          },
+          {
+            "precision": 0.44,
+            "recall": 0.7857142857142857,
+            "threshold": 0.2604923103919594
+          },
+          {
+            "precision": 0.4489795918367347,
+            "recall": 0.7857142857142857,
+            "threshold": 0.28183784439970383
+          },
+          {
+            "precision": 0.4583333333333333,
+            "recall": 0.7857142857142857,
+            "threshold": 0.30331272607892745
+          },
+          {
+            "precision": 0.46808510638297873,
+            "recall": 0.7857142857142857,
+            "threshold": 0.3101475693193326
+          },
+          {
+            "precision": 0.45652173913043476,
+            "recall": 0.75,
+            "threshold": 0.32005460467254576
+          },
+          {
+            "precision": 0.4444444444444444,
+            "recall": 0.7142857142857143,
+            "threshold": 0.32520436274739006
+          },
+          {
+            "precision": 0.45454545454545453,
+            "recall": 0.7142857142857143,
+            "threshold": 0.39882354222426875
+          },
+          {
+            "precision": 0.46511627906976744,
+            "recall": 0.7142857142857143,
+            "threshold": 0.4049341374504143
+          },
+          {
+            "precision": 0.4523809523809524,
+            "recall": 0.6785714285714286,
+            "threshold": 0.420571580830845
+          },
+          {
+            "precision": 0.4634146341463415,
+            "recall": 0.6785714285714286,
+            "threshold": 0.4341718354537837
+          },
+          {
+            "precision": 0.475,
+            "recall": 0.6785714285714286,
+            "threshold": 0.44796957143557037
+          },
+          {
+            "precision": 0.46153846153846156,
+            "recall": 0.6428571428571429,
+            "threshold": 0.47214271545271336
+          },
+          {
+            "precision": 0.47368421052631576,
+            "recall": 0.6428571428571429,
+            "threshold": 0.4765969541523558
+          },
+          {
+            "precision": 0.4864864864864865,
+            "recall": 0.6428571428571429,
+            "threshold": 0.47700977655271704
+          },
+          {
+            "precision": 0.4722222222222222,
+            "recall": 0.6071428571428571,
+            "threshold": 0.49357786646532464
+          },
+          {
+            "precision": 0.45714285714285713,
+            "recall": 0.5714285714285714,
+            "threshold": 0.5046868558173903
+          },
+          {
+            "precision": 0.47058823529411764,
+            "recall": 0.5714285714285714,
+            "threshold": 0.5079406425205739
+          },
+          {
+            "precision": 0.45454545454545453,
+            "recall": 0.5357142857142857,
+            "threshold": 0.5112747213686085
+          },
+          {
+            "precision": 0.46875,
+            "recall": 0.5357142857142857,
+            "threshold": 0.5474409113284238
+          },
+          {
+            "precision": 0.4838709677419355,
+            "recall": 0.5357142857142857,
+            "threshold": 0.5486993038355893
+          },
+          {
+            "precision": 0.4666666666666667,
+            "recall": 0.5,
+            "threshold": 0.5512672460905512
+          },
+          {
+            "precision": 0.4827586206896552,
+            "recall": 0.5,
+            "threshold": 0.5675107406206719
+          },
+          {
+            "precision": 0.4642857142857143,
+            "recall": 0.4642857142857143,
+            "threshold": 0.5833820394550312
+          },
+          {
+            "precision": 0.4444444444444444,
+            "recall": 0.42857142857142855,
+            "threshold": 0.6108869734438016
+          },
+          {
+            "precision": 0.46153846153846156,
+            "recall": 0.42857142857142855,
+            "threshold": 0.6183689966753316
+          },
+          {
+            "precision": 0.48,
+            "recall": 0.42857142857142855,
+            "threshold": 0.6681532012318508
+          },
+          {
+            "precision": 0.5,
+            "recall": 0.42857142857142855,
+            "threshold": 0.6839839319154413
+          },
+          {
+            "precision": 0.4782608695652174,
+            "recall": 0.39285714285714285,
+            "threshold": 0.7065614098668896
+          },
+          {
+            "precision": 0.5,
+            "recall": 0.39285714285714285,
+            "threshold": 0.7197046864039541
+          },
+          {
+            "precision": 0.47619047619047616,
+            "recall": 0.35714285714285715,
+            "threshold": 0.7298317482601286
+          },
+          {
+            "precision": 0.45,
+            "recall": 0.32142857142857145,
+            "threshold": 0.7558042041572239
+          },
+          {
+            "precision": 0.42105263157894735,
+            "recall": 0.2857142857142857,
+            "threshold": 0.7579544029403025
+          },
+          {
+            "precision": 0.4444444444444444,
+            "recall": 0.2857142857142857,
+            "threshold": 0.7837985890347726
+          },
+          {
+            "precision": 0.4117647058823529,
+            "recall": 0.25,
+            "threshold": 0.80317946927987
+          },
+          {
+            "precision": 0.375,
+            "recall": 0.21428571428571427,
+            "threshold": 0.8050278270130223
+          },
+          {
+            "precision": 0.3333333333333333,
+            "recall": 0.17857142857142858,
+            "threshold": 0.8102172359965896
+          },
+          {
+            "precision": 0.35714285714285715,
+            "recall": 0.17857142857142858,
+            "threshold": 0.824844977148233
+          },
+          {
+            "precision": 0.38461538461538464,
+            "recall": 0.17857142857142858,
+            "threshold": 0.8444218515250481
+          },
+          {
+            "precision": 0.3333333333333333,
+            "recall": 0.14285714285714285,
+            "threshold": 0.8653099277716401
+          },
+          {
+            "precision": 0.36363636363636365,
+            "recall": 0.14285714285714285,
+            "threshold": 0.8676027754927809
+          },
+          {
+            "precision": 0.4,
+            "recall": 0.14285714285714285,
+            "threshold": 0.8704712321086546
+          },
+          {
+            "precision": 0.4444444444444444,
+            "recall": 0.14285714285714285,
+            "threshold": 0.8988382879679935
+          },
+          {
+            "precision": 0.375,
+            "recall": 0.10714285714285714,
+            "threshold": 0.9021659504395827
+          },
+          {
+            "precision": 0.2857142857142857,
+            "recall": 0.07142857142857142,
+            "threshold": 0.9081128851953352
+          },
+          {
+            "precision": 0.16666666666666666,
+            "recall": 0.03571428571428571,
+            "threshold": 0.9097462559682401
+          },
+          {
+            "precision": 0.2,
+            "recall": 0.03571428571428571,
+            "threshold": 0.9130110532378982
+          },
+          {
+            "precision": 0.25,
+            "recall": 0.03571428571428571,
+            "threshold": 0.9328338242269067
+          },
+          {
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.9666063677707588
+          },
+          {
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.9675402502901433
+          },
+          {
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.9827854760376531
+          }
+        ]
+      },
+      "per_category": {
+        "bank_alert": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 3
+          },
+          "count": 3
+        },
+        "family_emergency": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.3333333333333333,
+          "accuracy": 0.6666666666666666,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 1,
+            "tp": 2
+          },
+          "count": 3
+        },
+        "government_impersonation": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.3333333333333333,
+          "accuracy": 0.6666666666666666,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 1,
+            "tp": 2
+          },
+          "count": 3
+        },
+        "investment_crypto": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "accuracy": 0.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 3,
+            "tp": 0
+          },
+          "count": 3
+        },
+        "job_offer": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.5,
+          "accuracy": 0.5,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 1,
+            "tp": 1
+          },
+          "count": 2
+        },
+        "marketplace": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.5,
+          "accuracy": 0.5,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 1,
+            "tp": 1
+          },
+          "count": 2
+        },
+        "other": {
+          "threshold": 0.5,
+          "precision": 0.05,
+          "recall": 0.5,
+          "f1": 0.09090909090909091,
+          "false_positive_rate": 0.59375,
+          "false_negative_rate": 0.5,
+          "accuracy": 0.4117647058823529,
+          "confusion_matrix": {
+            "tn": 13,
+            "fp": 19,
+            "fn": 1,
+            "tp": 1
+          },
+          "count": 34
+        },
+        "package_delivery": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 2
+        },
+        "prize_or_lottery": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.5,
+          "accuracy": 0.5,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 1,
+            "tp": 1
+          },
+          "count": 2
+        },
+        "romance": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.5,
+          "accuracy": 0.5,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 1,
+            "tp": 1
+          },
+          "count": 2
+        },
+        "tech_support": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "accuracy": 0.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "count": 2
+        },
+        "utility_or_billing": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 2
+        }
+      },
+      "per_channel": {
+        "chat": {
+          "threshold": 0.5,
+          "precision": 0.75,
+          "recall": 0.42857142857142855,
+          "f1": 0.5454545454545454,
+          "false_positive_rate": 0.2,
+          "false_negative_rate": 0.5714285714285714,
+          "accuracy": 0.5833333333333334,
+          "confusion_matrix": {
+            "tn": 4,
+            "fp": 1,
+            "fn": 4,
+            "tp": 3
+          },
+          "count": 12
+        },
+        "email": {
+          "threshold": 0.5,
+          "precision": 0.5384615384615384,
+          "recall": 0.875,
+          "f1": 0.6666666666666667,
+          "false_positive_rate": 0.5454545454545454,
+          "false_negative_rate": 0.125,
+          "accuracy": 0.631578947368421,
+          "confusion_matrix": {
+            "tn": 5,
+            "fp": 6,
+            "fn": 1,
+            "tp": 7
+          },
+          "count": 19
+        },
+        "other": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.6666666666666666,
+          "false_negative_rate": 1.0,
+          "accuracy": 0.2,
+          "confusion_matrix": {
+            "tn": 1,
+            "fp": 2,
+            "fn": 2,
+            "tp": 0
+          },
+          "count": 5
+        },
+        "sms": {
+          "threshold": 0.5,
+          "precision": 0.35714285714285715,
+          "recall": 0.8333333333333334,
+          "f1": 0.5,
+          "false_positive_rate": 0.75,
+          "false_negative_rate": 0.16666666666666666,
+          "accuracy": 0.4444444444444444,
+          "confusion_matrix": {
+            "tn": 3,
+            "fp": 9,
+            "fn": 1,
+            "tp": 5
+          },
+          "count": 18
+        },
+        "social": {
+          "threshold": 0.5,
+          "precision": 0.5,
+          "recall": 0.2,
+          "f1": 0.28571428571428575,
+          "false_positive_rate": 1.0,
+          "false_negative_rate": 0.8,
+          "accuracy": 0.16666666666666666,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 1,
+            "fn": 4,
+            "tp": 1
+          },
+          "count": 6
+        }
+      },
+      "tactic_metrics": null,
+      "misclassified": [
+        {
+          "id": "eval_135",
+          "text": "The client moved tomorrow's deadline forward. Reply in this thread with your realistic estimate.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.7579544029403025
+        },
+        {
+          "id": "eval_148",
+          "text": "Reminder: utility crews will test alarms at noon. Your service will not be disconnected.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.5112747213686085
+        },
+        {
+          "id": "eval_037",
+          "text": "Immediate job offer: buy office equipment with gift cards and we will reimburse you tomorrow.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.4049341374504143
+        },
+        {
+          "id": "eval_090",
+          "text": "Use code 811699 to approve your own sign-in. If this was not you, deny the request in the app.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.5046868558173903
+        },
+        {
+          "id": "eval_079",
+          "text": "Fraud monitor declined a $410 purchase. Open your bank app directly if you made it.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.6183689966753316
+        },
+        {
+          "id": "eval_081",
+          "text": "A recurring subscription charged $12.99 today. Manage merchants inside your banking app.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.9097462559682401
+        },
+        {
+          "id": "eval_150",
+          "text": "Your friend shared a photo album at https://photos.example.org/family; the link was created from your shared account.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.9827854760376531
+        },
+        {
+          "id": "eval_076",
+          "text": "Deposit confirmed: $620.00 was added to checking. This automated message cannot accept replies.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.8102172359965896
+        },
+        {
+          "id": "eval_047",
+          "text": "Guaranteed 30% crypto return this week. Leave this app and message me privately to deposit now.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.3101475693193326
+        },
+        {
+          "id": "eval_050",
+          "text": "An expert can triple your savings overnight. Contact 555-0112 off-platform and pay in crypto.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.1007012080683658
+        },
+        {
+          "id": "eval_113",
+          "text": "Order confirmed: two notebooks, total $18.42. We will email again when it ships.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.6108869734438016
+        },
+        {
+          "id": "eval_096",
+          "text": "Courier update: weather delayed today's route. A new delivery estimate will appear tomorrow.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.9130110532378982
+        },
+        {
+          "id": "eval_125",
+          "text": "Urgent: the basement pipe is leaking. I shut off the water; please bring towels when you get home.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.9666063677707588
+        },
+        {
+          "id": "eval_022",
+          "text": "Your computer license failed. Enable remote control in the next ten minutes to avoid a permanent lock.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.47700977655271704
+        },
+        {
+          "id": "eval_118",
+          "text": "Thanks for your purchase. Your digital receipt is attached; no reply is needed.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.8653099277716401
+        },
+        {
+          "id": "eval_044",
+          "text": "Lottery claims desk: send crypto now to unlock your unclaimed jackpot.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.014041700164018955
+        },
+        {
+          "id": "eval_112",
+          "text": "Reminder from the library: your study room reservation begins in 30 minutes.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.824844977148233
+        },
+        {
+          "id": "eval_117",
+          "text": "Order 7314 has shipped. The delivery address matches the one saved during checkout.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.6681532012318508
+        },
+        {
+          "id": "eval_048",
+          "text": "Our private coin group never loses. Transfer crypto today before the next price jump.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.49357786646532464
+        },
+        {
+          "id": "eval_115",
+          "text": "Receipt for your bookstore purchase: $31.70 paid with the card ending 0142.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.8676027754927809
+        },
+        {
+          "id": "eval_065",
+          "text": "Road toll authority: a late penalty begins tonight. Pay now at https://toll-review.example.com/118.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.24391087688713198
+        },
+        {
+          "id": "eval_095",
+          "text": "Your order shipped and is expected Tuesday. Track it from your original order confirmation.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.8704712321086546
+        },
+        {
+          "id": "eval_018",
+          "text": "Municipal collections: pay by wire before 5 PM or enforcement officers will be dispatched.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.19106709150239054
+        },
+        {
+          "id": "eval_093",
+          "text": "Your package is out for delivery today between 2 and 5 PM. No signature is required.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.9675402502901433
+        },
+        {
+          "id": "eval_053",
+          "text": "I will buy the table, but leave the marketplace chat and refund my extra payment by Zelle now.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.44796957143557037
+        },
+        {
+          "id": "eval_021",
+          "text": "Security center calling from 555-0106: share the code on your screen before the warning expires.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.08044581855253541
+        },
+        {
+          "id": "eval_028",
+          "text": "I cannot video call from the base, but I need a Zelle payment. Promise you will not tell anyone.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.32005460467254576
+        },
+        {
+          "id": "eval_032",
+          "text": "My phone broke and I cannot talk. Buy gift cards for the repair before the shop closes.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.10905784593110368
+        },
+        {
+          "id": "eval_097",
+          "text": "A signature will be required for tomorrow's delivery. No payment is due.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.5512672460905512
+        },
+        {
+          "id": "eval_126",
+          "text": "I am at the clinic with Grandma. She is stable, and I will call after the doctor finishes.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.7065614098668896
+        },
+        {
+          "id": "eval_108",
+          "text": "Haircut appointment confirmed for Saturday at 10 AM. No deposit is due.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.5474409113284238
+        }
+      ],
+      "confidence_intervals_95": {
+        "precision": {
+          "low": 0.3046577363376085,
+          "high": 0.6181054865986247
+        },
+        "recall": {
+          "low": 0.390704789856154,
+          "high": 0.7349170381926877
+        },
+        "false_positive_rate": {
+          "low": 0.4225972657298823,
+          "high": 0.744805975196862
+        }
+      }
+    },
+    {
+      "name": "tfidf_logistic_regression",
+      "metrics": {
+        "threshold": 0.5,
+        "precision": 0.6,
+        "recall": 0.21428571428571427,
+        "f1": 0.3157894736842105,
+        "false_positive_rate": 0.125,
+        "false_negative_rate": 0.7857142857142857,
+        "accuracy": 0.5666666666666667,
+        "confusion_matrix": {
+          "tn": 28,
+          "fp": 4,
+          "fn": 22,
+          "tp": 6
+        }
+      },
+      "threshold_sweep": {
+        "max_false_positive_rate": 0.05,
+        "recommended": {
+          "threshold": 0.7238686954793868,
+          "precision": 0.5,
+          "recall": 0.03571428571428571,
+          "f1": 0.06666666666666667,
+          "false_positive_rate": 0.03125
+        },
+        "points": [
+          {
+            "threshold": 0.0,
+            "precision": 0.4666666666666667,
+            "recall": 1.0,
+            "f1": 0.6363636363636364,
+            "false_positive_rate": 1.0
+          },
+          {
+            "threshold": 0.1179212496950014,
+            "precision": 0.4666666666666667,
+            "recall": 1.0,
+            "f1": 0.6363636363636364,
+            "false_positive_rate": 1.0
+          },
+          {
+            "threshold": 0.1327745828029522,
+            "precision": 0.4745762711864407,
+            "recall": 1.0,
+            "f1": 0.6436781609195402,
+            "false_positive_rate": 0.96875
+          },
+          {
+            "threshold": 0.15395067731853285,
+            "precision": 0.4827586206896552,
+            "recall": 1.0,
+            "f1": 0.6511627906976745,
+            "false_positive_rate": 0.9375
+          },
+          {
+            "threshold": 0.1686365635460035,
+            "precision": 0.49122807017543857,
+            "recall": 1.0,
+            "f1": 0.6588235294117647,
+            "false_positive_rate": 0.90625
+          },
+          {
+            "threshold": 0.1726520826139332,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "false_positive_rate": 0.875
+          },
+          {
+            "threshold": 0.1792869473342789,
+            "precision": 0.509090909090909,
+            "recall": 1.0,
+            "f1": 0.6746987951807228,
+            "false_positive_rate": 0.84375
+          },
+          {
+            "threshold": 0.1813145979328051,
+            "precision": 0.5,
+            "recall": 0.9642857142857143,
+            "f1": 0.6585365853658536,
+            "false_positive_rate": 0.84375
+          },
+          {
+            "threshold": 0.1937734036576797,
+            "precision": 0.49056603773584906,
+            "recall": 0.9285714285714286,
+            "f1": 0.6419753086419753,
+            "false_positive_rate": 0.84375
+          },
+          {
+            "threshold": 0.2011825476232791,
+            "precision": 0.5,
+            "recall": 0.9285714285714286,
+            "f1": 0.65,
+            "false_positive_rate": 0.8125
+          },
+          {
+            "threshold": 0.21214814475465,
+            "precision": 0.49019607843137253,
+            "recall": 0.8928571428571429,
+            "f1": 0.6329113924050633,
+            "false_positive_rate": 0.8125
+          },
+          {
+            "threshold": 0.2121921218660037,
+            "precision": 0.5,
+            "recall": 0.8928571428571429,
+            "f1": 0.6410256410256411,
+            "false_positive_rate": 0.78125
+          },
+          {
+            "threshold": 0.2165675570923966,
+            "precision": 0.5102040816326531,
+            "recall": 0.8928571428571429,
+            "f1": 0.6493506493506493,
+            "false_positive_rate": 0.75
+          },
+          {
+            "threshold": 0.21850241884890428,
+            "precision": 0.5208333333333334,
+            "recall": 0.8928571428571429,
+            "f1": 0.6578947368421053,
+            "false_positive_rate": 0.71875
+          },
+          {
+            "threshold": 0.22336549621610818,
+            "precision": 0.5106382978723404,
+            "recall": 0.8571428571428571,
+            "f1": 0.64,
+            "false_positive_rate": 0.71875
+          },
+          {
+            "threshold": 0.2254612043662028,
+            "precision": 0.5,
+            "recall": 0.8214285714285714,
+            "f1": 0.6216216216216216,
+            "false_positive_rate": 0.71875
+          },
+          {
+            "threshold": 0.22687018374411616,
+            "precision": 0.5111111111111111,
+            "recall": 0.8214285714285714,
+            "f1": 0.6301369863013698,
+            "false_positive_rate": 0.6875
+          },
+          {
+            "threshold": 0.261503640682709,
+            "precision": 0.5227272727272727,
+            "recall": 0.8214285714285714,
+            "f1": 0.6388888888888888,
+            "false_positive_rate": 0.65625
+          },
+          {
+            "threshold": 0.2638003955692655,
+            "precision": 0.5348837209302325,
+            "recall": 0.8214285714285714,
+            "f1": 0.647887323943662,
+            "false_positive_rate": 0.625
+          },
+          {
+            "threshold": 0.26738805345365174,
+            "precision": 0.5476190476190477,
+            "recall": 0.8214285714285714,
+            "f1": 0.6571428571428571,
+            "false_positive_rate": 0.59375
+          },
+          {
+            "threshold": 0.26762474878258286,
+            "precision": 0.5365853658536586,
+            "recall": 0.7857142857142857,
+            "f1": 0.6376811594202899,
+            "false_positive_rate": 0.59375
+          },
+          {
+            "threshold": 0.26793244061821997,
+            "precision": 0.525,
+            "recall": 0.75,
+            "f1": 0.6176470588235295,
+            "false_positive_rate": 0.59375
+          },
+          {
+            "threshold": 0.2685466534293926,
+            "precision": 0.5384615384615384,
+            "recall": 0.75,
+            "f1": 0.6268656716417911,
+            "false_positive_rate": 0.5625
+          },
+          {
+            "threshold": 0.2693968324329697,
+            "precision": 0.5263157894736842,
+            "recall": 0.7142857142857143,
+            "f1": 0.6060606060606061,
+            "false_positive_rate": 0.5625
+          },
+          {
+            "threshold": 0.2792330580095822,
+            "precision": 0.5135135135135135,
+            "recall": 0.6785714285714286,
+            "f1": 0.5846153846153848,
+            "false_positive_rate": 0.5625
+          },
+          {
+            "threshold": 0.2866489062454794,
+            "precision": 0.5277777777777778,
+            "recall": 0.6785714285714286,
+            "f1": 0.5937499999999999,
+            "false_positive_rate": 0.53125
+          },
+          {
+            "threshold": 0.3165438967301452,
+            "precision": 0.5142857142857142,
+            "recall": 0.6428571428571429,
+            "f1": 0.5714285714285714,
+            "false_positive_rate": 0.53125
+          },
+          {
+            "threshold": 0.3173104246581915,
+            "precision": 0.5,
+            "recall": 0.6071428571428571,
+            "f1": 0.5483870967741935,
+            "false_positive_rate": 0.53125
+          },
+          {
+            "threshold": 0.31847437229351294,
+            "precision": 0.48484848484848486,
+            "recall": 0.5714285714285714,
+            "f1": 0.5245901639344263,
+            "false_positive_rate": 0.53125
+          },
+          {
+            "threshold": 0.3187978478379563,
+            "precision": 0.5,
+            "recall": 0.5714285714285714,
+            "f1": 0.5333333333333333,
+            "false_positive_rate": 0.5
+          },
+          {
+            "threshold": 0.32281117514407043,
+            "precision": 0.5161290322580645,
+            "recall": 0.5714285714285714,
+            "f1": 0.5423728813559322,
+            "false_positive_rate": 0.46875
+          },
+          {
+            "threshold": 0.3342376152916253,
+            "precision": 0.5333333333333333,
+            "recall": 0.5714285714285714,
+            "f1": 0.5517241379310344,
+            "false_positive_rate": 0.4375
+          },
+          {
+            "threshold": 0.33931968625874714,
+            "precision": 0.5172413793103449,
+            "recall": 0.5357142857142857,
+            "f1": 0.5263157894736843,
+            "false_positive_rate": 0.4375
+          },
+          {
+            "threshold": 0.34393649781928787,
+            "precision": 0.5357142857142857,
+            "recall": 0.5357142857142857,
+            "f1": 0.5357142857142857,
+            "false_positive_rate": 0.40625
+          },
+          {
+            "threshold": 0.3450186153081497,
+            "precision": 0.5555555555555556,
+            "recall": 0.5357142857142857,
+            "f1": 0.5454545454545454,
+            "false_positive_rate": 0.375
+          },
+          {
+            "threshold": 0.3565752842213918,
+            "precision": 0.5384615384615384,
+            "recall": 0.5,
+            "f1": 0.5185185185185186,
+            "false_positive_rate": 0.375
+          },
+          {
+            "threshold": 0.3571870700106817,
+            "precision": 0.52,
+            "recall": 0.4642857142857143,
+            "f1": 0.49056603773584906,
+            "false_positive_rate": 0.375
+          },
+          {
+            "threshold": 0.3576796417042233,
+            "precision": 0.5416666666666666,
+            "recall": 0.4642857142857143,
+            "f1": 0.5,
+            "false_positive_rate": 0.34375
+          },
+          {
+            "threshold": 0.366998516166788,
+            "precision": 0.5652173913043478,
+            "recall": 0.4642857142857143,
+            "f1": 0.5098039215686274,
+            "false_positive_rate": 0.3125
+          },
+          {
+            "threshold": 0.3765517243834194,
+            "precision": 0.5454545454545454,
+            "recall": 0.42857142857142855,
+            "f1": 0.4799999999999999,
+            "false_positive_rate": 0.3125
+          },
+          {
+            "threshold": 0.37992247105965254,
+            "precision": 0.5714285714285714,
+            "recall": 0.42857142857142855,
+            "f1": 0.48979591836734687,
+            "false_positive_rate": 0.28125
+          },
+          {
+            "threshold": 0.381574460794167,
+            "precision": 0.55,
+            "recall": 0.39285714285714285,
+            "f1": 0.45833333333333337,
+            "false_positive_rate": 0.28125
+          },
+          {
+            "threshold": 0.3918985113531397,
+            "precision": 0.5263157894736842,
+            "recall": 0.35714285714285715,
+            "f1": 0.425531914893617,
+            "false_positive_rate": 0.28125
+          },
+          {
+            "threshold": 0.41717957993680865,
+            "precision": 0.5,
+            "recall": 0.32142857142857145,
+            "f1": 0.391304347826087,
+            "false_positive_rate": 0.28125
+          },
+          {
+            "threshold": 0.4174334715180813,
+            "precision": 0.47058823529411764,
+            "recall": 0.2857142857142857,
+            "f1": 0.35555555555555557,
+            "false_positive_rate": 0.28125
+          },
+          {
+            "threshold": 0.45075431182081954,
+            "precision": 0.5,
+            "recall": 0.2857142857142857,
+            "f1": 0.36363636363636365,
+            "false_positive_rate": 0.25
+          },
+          {
+            "threshold": 0.4525648985635892,
+            "precision": 0.4666666666666667,
+            "recall": 0.25,
+            "f1": 0.32558139534883723,
+            "false_positive_rate": 0.25
+          },
+          {
+            "threshold": 0.4539127366979268,
+            "precision": 0.5,
+            "recall": 0.25,
+            "f1": 0.3333333333333333,
+            "false_positive_rate": 0.21875
+          },
+          {
+            "threshold": 0.4569555395451087,
+            "precision": 0.5384615384615384,
+            "recall": 0.25,
+            "f1": 0.3414634146341463,
+            "false_positive_rate": 0.1875
+          },
+          {
+            "threshold": 0.46379898367838696,
+            "precision": 0.5833333333333334,
+            "recall": 0.25,
+            "f1": 0.35000000000000003,
+            "false_positive_rate": 0.15625
+          },
+          {
+            "threshold": 0.4700586181544241,
+            "precision": 0.5454545454545454,
+            "recall": 0.21428571428571427,
+            "f1": 0.30769230769230765,
+            "false_positive_rate": 0.15625
+          },
+          {
+            "threshold": 0.5055465957220118,
+            "precision": 0.6,
+            "recall": 0.21428571428571427,
+            "f1": 0.3157894736842105,
+            "false_positive_rate": 0.125
+          },
+          {
+            "threshold": 0.5280325053057495,
+            "precision": 0.5555555555555556,
+            "recall": 0.17857142857142858,
+            "f1": 0.2702702702702703,
+            "false_positive_rate": 0.125
+          },
+          {
+            "threshold": 0.5328094404477782,
+            "precision": 0.5,
+            "recall": 0.14285714285714285,
+            "f1": 0.22222222222222224,
+            "false_positive_rate": 0.125
+          },
+          {
+            "threshold": 0.5733085466834326,
+            "precision": 0.5714285714285714,
+            "recall": 0.14285714285714285,
+            "f1": 0.2285714285714286,
+            "false_positive_rate": 0.09375
+          },
+          {
+            "threshold": 0.5734582992314927,
+            "precision": 0.5,
+            "recall": 0.10714285714285714,
+            "f1": 0.17647058823529413,
+            "false_positive_rate": 0.09375
+          },
+          {
+            "threshold": 0.6163524581577,
+            "precision": 0.6,
+            "recall": 0.10714285714285714,
+            "f1": 0.18181818181818182,
+            "false_positive_rate": 0.0625
+          },
+          {
+            "threshold": 0.7017623166144907,
+            "precision": 0.5,
+            "recall": 0.07142857142857142,
+            "f1": 0.125,
+            "false_positive_rate": 0.0625
+          },
+          {
+            "threshold": 0.705043120067261,
+            "precision": 0.3333333333333333,
+            "recall": 0.03571428571428571,
+            "f1": 0.06451612903225806,
+            "false_positive_rate": 0.0625
+          },
+          {
+            "threshold": 0.7238686954793868,
+            "precision": 0.5,
+            "recall": 0.03571428571428571,
+            "f1": 0.06666666666666667,
+            "false_positive_rate": 0.03125
+          },
+          {
+            "threshold": 0.7506283831802683,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "false_positive_rate": 0.03125
+          },
+          {
+            "threshold": 0.7506283831802684,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "false_positive_rate": 0.0
+          },
+          {
+            "threshold": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "false_positive_rate": 0.0
+          }
+        ],
+        "precision_recall_curve": [
+          {
+            "precision": 0.4666666666666667,
+            "recall": 1.0,
+            "threshold": 0.1179212496950014
+          },
+          {
+            "precision": 0.4745762711864407,
+            "recall": 1.0,
+            "threshold": 0.1327745828029522
+          },
+          {
+            "precision": 0.4827586206896552,
+            "recall": 1.0,
+            "threshold": 0.15395067731853285
+          },
+          {
+            "precision": 0.49122807017543857,
+            "recall": 1.0,
+            "threshold": 0.1686365635460035
+          },
+          {
+            "precision": 0.5,
+            "recall": 1.0,
+            "threshold": 0.1726520826139332
+          },
+          {
+            "precision": 0.509090909090909,
+            "recall": 1.0,
+            "threshold": 0.1792869473342789
+          },
+          {
+            "precision": 0.5,
+            "recall": 0.9642857142857143,
+            "threshold": 0.1813145979328051
+          },
+          {
+            "precision": 0.49056603773584906,
+            "recall": 0.9285714285714286,
+            "threshold": 0.1937734036576797
+          },
+          {
+            "precision": 0.5,
+            "recall": 0.9285714285714286,
+            "threshold": 0.2011825476232791
+          },
+          {
+            "precision": 0.49019607843137253,
+            "recall": 0.8928571428571429,
+            "threshold": 0.21214814475465
+          },
+          {
+            "precision": 0.5,
+            "recall": 0.8928571428571429,
+            "threshold": 0.2121921218660037
+          },
+          {
+            "precision": 0.5102040816326531,
+            "recall": 0.8928571428571429,
+            "threshold": 0.2165675570923966
+          },
+          {
+            "precision": 0.5208333333333334,
+            "recall": 0.8928571428571429,
+            "threshold": 0.21850241884890428
+          },
+          {
+            "precision": 0.5106382978723404,
+            "recall": 0.8571428571428571,
+            "threshold": 0.22336549621610818
+          },
+          {
+            "precision": 0.5,
+            "recall": 0.8214285714285714,
+            "threshold": 0.2254612043662028
+          },
+          {
+            "precision": 0.5111111111111111,
+            "recall": 0.8214285714285714,
+            "threshold": 0.22687018374411616
+          },
+          {
+            "precision": 0.5227272727272727,
+            "recall": 0.8214285714285714,
+            "threshold": 0.261503640682709
+          },
+          {
+            "precision": 0.5348837209302325,
+            "recall": 0.8214285714285714,
+            "threshold": 0.2638003955692655
+          },
+          {
+            "precision": 0.5476190476190477,
+            "recall": 0.8214285714285714,
+            "threshold": 0.26738805345365174
+          },
+          {
+            "precision": 0.5365853658536586,
+            "recall": 0.7857142857142857,
+            "threshold": 0.26762474878258286
+          },
+          {
+            "precision": 0.525,
+            "recall": 0.75,
+            "threshold": 0.26793244061821997
+          },
+          {
+            "precision": 0.5384615384615384,
+            "recall": 0.75,
+            "threshold": 0.2685466534293926
+          },
+          {
+            "precision": 0.5263157894736842,
+            "recall": 0.7142857142857143,
+            "threshold": 0.2693968324329697
+          },
+          {
+            "precision": 0.5135135135135135,
+            "recall": 0.6785714285714286,
+            "threshold": 0.2792330580095822
+          },
+          {
+            "precision": 0.5277777777777778,
+            "recall": 0.6785714285714286,
+            "threshold": 0.2866489062454794
+          },
+          {
+            "precision": 0.5142857142857142,
+            "recall": 0.6428571428571429,
+            "threshold": 0.3165438967301452
+          },
+          {
+            "precision": 0.5,
+            "recall": 0.6071428571428571,
+            "threshold": 0.3173104246581915
+          },
+          {
+            "precision": 0.48484848484848486,
+            "recall": 0.5714285714285714,
+            "threshold": 0.31847437229351294
+          },
+          {
+            "precision": 0.5,
+            "recall": 0.5714285714285714,
+            "threshold": 0.3187978478379563
+          },
+          {
+            "precision": 0.5161290322580645,
+            "recall": 0.5714285714285714,
+            "threshold": 0.32281117514407043
+          },
+          {
+            "precision": 0.5333333333333333,
+            "recall": 0.5714285714285714,
+            "threshold": 0.3342376152916253
+          },
+          {
+            "precision": 0.5172413793103449,
+            "recall": 0.5357142857142857,
+            "threshold": 0.33931968625874714
+          },
+          {
+            "precision": 0.5357142857142857,
+            "recall": 0.5357142857142857,
+            "threshold": 0.34393649781928787
+          },
+          {
+            "precision": 0.5555555555555556,
+            "recall": 0.5357142857142857,
+            "threshold": 0.3450186153081497
+          },
+          {
+            "precision": 0.5384615384615384,
+            "recall": 0.5,
+            "threshold": 0.3565752842213918
+          },
+          {
+            "precision": 0.52,
+            "recall": 0.4642857142857143,
+            "threshold": 0.3571870700106817
+          },
+          {
+            "precision": 0.5416666666666666,
+            "recall": 0.4642857142857143,
+            "threshold": 0.3576796417042233
+          },
+          {
+            "precision": 0.5652173913043478,
+            "recall": 0.4642857142857143,
+            "threshold": 0.366998516166788
+          },
+          {
+            "precision": 0.5454545454545454,
+            "recall": 0.42857142857142855,
+            "threshold": 0.3765517243834194
+          },
+          {
+            "precision": 0.5714285714285714,
+            "recall": 0.42857142857142855,
+            "threshold": 0.37992247105965254
+          },
+          {
+            "precision": 0.55,
+            "recall": 0.39285714285714285,
+            "threshold": 0.381574460794167
+          },
+          {
+            "precision": 0.5263157894736842,
+            "recall": 0.35714285714285715,
+            "threshold": 0.3918985113531397
+          },
+          {
+            "precision": 0.5,
+            "recall": 0.32142857142857145,
+            "threshold": 0.41717957993680865
+          },
+          {
+            "precision": 0.47058823529411764,
+            "recall": 0.2857142857142857,
+            "threshold": 0.4174334715180813
+          },
+          {
+            "precision": 0.5,
+            "recall": 0.2857142857142857,
+            "threshold": 0.45075431182081954
+          },
+          {
+            "precision": 0.4666666666666667,
+            "recall": 0.25,
+            "threshold": 0.4525648985635892
+          },
+          {
+            "precision": 0.5,
+            "recall": 0.25,
+            "threshold": 0.4539127366979268
+          },
+          {
+            "precision": 0.5384615384615384,
+            "recall": 0.25,
+            "threshold": 0.4569555395451087
+          },
+          {
+            "precision": 0.5833333333333334,
+            "recall": 0.25,
+            "threshold": 0.46379898367838696
+          },
+          {
+            "precision": 0.5454545454545454,
+            "recall": 0.21428571428571427,
+            "threshold": 0.4700586181544241
+          },
+          {
+            "precision": 0.6,
+            "recall": 0.21428571428571427,
+            "threshold": 0.5055465957220118
+          },
+          {
+            "precision": 0.5555555555555556,
+            "recall": 0.17857142857142858,
+            "threshold": 0.5280325053057495
+          },
+          {
+            "precision": 0.5,
+            "recall": 0.14285714285714285,
+            "threshold": 0.5328094404477782
+          },
+          {
+            "precision": 0.5714285714285714,
+            "recall": 0.14285714285714285,
+            "threshold": 0.5733085466834326
+          },
+          {
+            "precision": 0.5,
+            "recall": 0.10714285714285714,
+            "threshold": 0.5734582992314927
+          },
+          {
+            "precision": 0.6,
+            "recall": 0.10714285714285714,
+            "threshold": 0.6163524581577
+          },
+          {
+            "precision": 0.5,
+            "recall": 0.07142857142857142,
+            "threshold": 0.7017623166144907
+          },
+          {
+            "precision": 0.3333333333333333,
+            "recall": 0.03571428571428571,
+            "threshold": 0.705043120067261
+          },
+          {
+            "precision": 0.5,
+            "recall": 0.03571428571428571,
+            "threshold": 0.7238686954793868
+          },
+          {
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.7506283831802683
+          }
+        ]
+      },
+      "per_category": {
+        "bank_alert": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.6666666666666666,
+          "accuracy": 0.3333333333333333,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 2,
+            "tp": 1
+          },
+          "count": 3
+        },
+        "family_emergency": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "accuracy": 0.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 3,
+            "tp": 0
+          },
+          "count": 3
+        },
+        "government_impersonation": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "accuracy": 0.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 3,
+            "tp": 0
+          },
+          "count": 3
+        },
+        "investment_crypto": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.6666666666666666,
+          "accuracy": 0.3333333333333333,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 2,
+            "tp": 1
+          },
+          "count": 3
+        },
+        "job_offer": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "accuracy": 0.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "count": 2
+        },
+        "marketplace": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.5,
+          "accuracy": 0.5,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 1,
+            "tp": 1
+          },
+          "count": 2
+        },
+        "other": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.125,
+          "false_negative_rate": 1.0,
+          "accuracy": 0.8235294117647058,
+          "confusion_matrix": {
+            "tn": 28,
+            "fp": 4,
+            "fn": 2,
+            "tp": 0
+          },
+          "count": 34
+        },
+        "package_delivery": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "accuracy": 0.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "count": 2
+        },
+        "prize_or_lottery": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "count": 2
+        },
+        "romance": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "accuracy": 0.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "count": 2
+        },
+        "tech_support": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.5,
+          "accuracy": 0.5,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 1,
+            "tp": 1
+          },
+          "count": 2
+        },
+        "utility_or_billing": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "accuracy": 0.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "count": 2
+        }
+      },
+      "per_channel": {
+        "chat": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "accuracy": 0.4166666666666667,
+          "confusion_matrix": {
+            "tn": 5,
+            "fp": 0,
+            "fn": 7,
+            "tp": 0
+          },
+          "count": 12
+        },
+        "email": {
+          "threshold": 0.5,
+          "precision": 0.3333333333333333,
+          "recall": 0.125,
+          "f1": 0.18181818181818182,
+          "false_positive_rate": 0.18181818181818182,
+          "false_negative_rate": 0.875,
+          "accuracy": 0.5263157894736842,
+          "confusion_matrix": {
+            "tn": 9,
+            "fp": 2,
+            "fn": 7,
+            "tp": 1
+          },
+          "count": 19
+        },
+        "other": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.5,
+          "accuracy": 0.8,
+          "confusion_matrix": {
+            "tn": 3,
+            "fp": 0,
+            "fn": 1,
+            "tp": 1
+          },
+          "count": 5
+        },
+        "sms": {
+          "threshold": 0.5,
+          "precision": 0.3333333333333333,
+          "recall": 0.16666666666666666,
+          "f1": 0.2222222222222222,
+          "false_positive_rate": 0.16666666666666666,
+          "false_negative_rate": 0.8333333333333334,
+          "accuracy": 0.6111111111111112,
+          "confusion_matrix": {
+            "tn": 10,
+            "fp": 2,
+            "fn": 5,
+            "tp": 1
+          },
+          "count": 18
+        },
+        "social": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.7499999999999999,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.4,
+          "accuracy": 0.6666666666666666,
+          "confusion_matrix": {
+            "tn": 1,
+            "fp": 0,
+            "fn": 2,
+            "tp": 3
+          },
+          "count": 6
+        }
+      },
+      "tactic_metrics": null,
+      "misclassified": [
+        {
+          "id": "eval_025",
+          "text": "I feel closer to you every day. Please keep us private and wire money so I can finally visit.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.1813145979328051
+        },
+        {
+          "id": "eval_037",
+          "text": "Immediate job offer: buy office equipment with gift cards and we will reimburse you tomorrow.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.2011825476232791
+        },
+        {
+          "id": "eval_005",
+          "text": "Package desk here. Reply YES immediately and then use https://parcel-review.example.net/508 to prevent return.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.41717957993680865
+        },
+        {
+          "id": "eval_008",
+          "text": "Fraud desk: we blocked a purchase. Reply with the six-digit code we sent so we can cancel it immediately.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.3173104246581915
+        },
+        {
+          "id": "eval_059",
+          "text": "Power department: service disconnects in 45 minutes unless you pay by gift card.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.2685466534293926
+        },
+        {
+          "id": "eval_082",
+          "text": "Your monthly statement is ready. Use your saved bookmark or mobile app to view it.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.7506283831802683
+        },
+        {
+          "id": "eval_063",
+          "text": "Billing agent at 555-0117: buy a prepaid card now or your account closes tonight.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.3918985113531397
+        },
+        {
+          "id": "eval_001",
+          "text": "Your parcel is paused for an address mismatch. Confirm before 8 PM at https://parcel-status.example.com/r/104.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.46379898367838696
+        },
+        {
+          "id": "eval_013",
+          "text": "Revenue office: an arrest notice will be filed today unless you pay the balance with gift cards.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.2866489062454794
+        },
+        {
+          "id": "eval_050",
+          "text": "An expert can triple your savings overnight. Contact 555-0112 off-platform and pay in crypto.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.26738805345365174
+        },
+        {
+          "id": "eval_022",
+          "text": "Your computer license failed. Enable remote control in the next ten minutes to avoid a permanent lock.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.3450186153081497
+        },
+        {
+          "id": "eval_118",
+          "text": "Thanks for your purchase. Your digital receipt is attached; no reply is needed.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.705043120067261
+        },
+        {
+          "id": "eval_014",
+          "text": "Court processing unit: wire the overdue penalty within one hour to prevent a warrant.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.2693968324329697
+        },
+        {
+          "id": "eval_030",
+          "text": "Hi Mom, this is my new number. I am stranded; send Zelle now and please do not call Dad.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.45075431182081954
+        },
+        {
+          "id": "eval_048",
+          "text": "Our private coin group never loses. Transfer crypto today before the next price jump.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.3565752842213918
+        },
+        {
+          "id": "eval_115",
+          "text": "Receipt for your bookstore purchase: $31.70 paid with the card ending 0142.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.5734582992314927
+        },
+        {
+          "id": "eval_065",
+          "text": "Road toll authority: a late penalty begins tonight. Pay now at https://toll-review.example.com/118.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.26762474878258286
+        },
+        {
+          "id": "eval_095",
+          "text": "Your order shipped and is expected Tuesday. Track it from your original order confirmation.",
+          "actual": "legit",
+          "predicted": "scam",
+          "score": 0.5328094404477782
+        },
+        {
+          "id": "eval_018",
+          "text": "Municipal collections: pay by wire before 5 PM or enforcement officers will be dispatched.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.366998516166788
+        },
+        {
+          "id": "eval_070",
+          "text": "Charity coordinator: wire an emergency donation within the hour or the matching funds disappear.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.3342376152916253
+        },
+        {
+          "id": "eval_039",
+          "text": "Recruiting team: secure this position now by wiring the refundable training deposit.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.37992247105965254
+        },
+        {
+          "id": "eval_053",
+          "text": "I will buy the table, but leave the marketplace chat and refund my extra payment by Zelle now.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.21850241884890428
+        },
+        {
+          "id": "eval_028",
+          "text": "I cannot video call from the base, but I need a Zelle payment. Promise you will not tell anyone.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.381574460794167
+        },
+        {
+          "id": "eval_031",
+          "text": "Grandpa, I had an accident. Wire bail money immediately and keep it from the rest of the family.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.22336549621610818
+        },
+        {
+          "id": "eval_009",
+          "text": "Your checking access expires in 30 minutes. Restore it at https://account-verify.example.net/811.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.3165438967301452
+        },
+        {
+          "id": "eval_032",
+          "text": "My phone broke and I cannot talk. Buy gift cards for the repair before the shop closes.",
+          "actual": "scam",
+          "predicted": "legit",
+          "score": 0.1792869473342789
+        }
+      ],
+      "confidence_intervals_95": {
+        "precision": {
+          "low": 0.3126695474501864,
+          "high": 0.8318224187964902
+        },
+        "recall": {
+          "low": 0.10212321701189422,
+          "high": 0.3953894707927388
+        },
+        "false_positive_rate": {
+          "low": 0.04970053844474301,
+          "high": 0.2806864978482796
+        }
+      }
+    }
+  ]
+}
