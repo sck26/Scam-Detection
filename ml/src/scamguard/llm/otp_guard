@@ -1,0 +1,121 @@
+"""Conservative, explainable safeguards for verification-code messages.
+
+A code *being delivered* is not the same as a request to disclose a code.
+This module does not authenticate sender identities or links.
+"""
+
+from __future__ import annotations
+
+import re
+
+from scamguard.llm.schema import DetectionOutput
+from scamguard.taxonomy import DangerLevel, ScamCategory, TacticName
+
+# Requiring BOTH an authentication context and a numeric OTP prevents treating
+# package locker PINs, booking codes, and unrelated numbers as login messages.
+_AUTH_CONTEXT = re.compile(
+    r"\b(?:verif(?:ication|y)|one[ -]?time|2fa|two[ -]?factor|"
+    r"authenticat(?:ion|e)|sign[ -]?in|signing in|log[ -]?in|login|"
+    r"new device|security code|account access)\b",
+    re.IGNORECASE,
+)
+_CODE_WITH_DIGITS = re.compile(
+    r"(?:\b(?:code|otp|passcode|pin)\b[^\n.!?]{0,35}\b\d{4,8}\b)"
+    r"|(?:\b\d{4,8}\b[^\n.!?]{0,40}\b(?:code|otp|passcode|pin|signing in)\b)",
+    re.IGNORECASE,
+)
+_LINK = re.compile(
+    r"\b(?:https?://|www\.)\S+|\b[a-z\d][a-z\d-]*\."
+    r"(?:com|net|org|co|io|app|info|xyz|top|site|online|link|me)\b",
+    re.IGNORECASE,
+)
+_HARMFUL_ADDITIONAL_REQUEST = re.compile(
+    r"\b(?:password|bank account|gift cards?|crypto|wire (?:money|funds)|"
+    r"install (?:an? )?(?:app|software|tool)|remote access|payment|pay)\b",
+    re.IGNORECASE,
+)
+# Explicit *requests to send a code to a person/channel*, not instructions to
+# enter it in the user's own app. Strictness helps avoid false positives.
+_DISCLOSE_REQUEST = re.compile(
+    r"\b(?:send|forward|share|text|dm|give|provide|tell|message)\b"
+    r".{0,55}\b(?:code|otp|passcode|pin|\d{4,8})\b"
+    r"|\breply\b.{0,24}\b(?:with|using)\b.{0,45}\b(?:code|otp|passcode|pin|\d{4,8})\b"
+    r"|\b(?:read|say)\b.{0,18}\b(?:code|otp|passcode|pin)\b.{0,12}\baloud\b"
+    r"|\b(?:reply|send|forward|share|text|message)\b.{0,35}\b(?:it|them|these digits|the digits)\b",
+    re.IGNORECASE,
+)
+_NO_REQUEST = re.compile(
+    r"(?:\b(?:do not|don't|never|will not|won't|would never|"
+    r"no one will|nobody will|we never|we won't|we will never)\b.{0,65})$",
+    re.IGNORECASE,
+)
+
+
+def _requests_code_disclosure(text: str) -> bool:
+    # Check each clause independently: "Never share it. Reply with your code"
+    # remains a disclosure request in the second sentence.
+    for clause in re.split(r"[.;!?\n]+|\bbut\b", text, flags=re.I):
+        for match in _DISCLOSE_REQUEST.finditer(clause):
+            prefix = clause[: match.start()]
+            # "We will never ask you to share ..." should not be actionable.
+            if _NO_REQUEST.search(prefix):
+                continue
+            if re.search(r"\b(?:never|do not|don't)\s*$", prefix, re.I):
+                continue
+            return True
+    return False
+
+
+def otp_signal(text: str) -> str | None:
+    """Return 'disclosure_request', 'routine_code', or None (defer to model).
+
+    Only strong, narrow patterns get an override. None is NOT proof of safety.
+    """
+    if not _AUTH_CONTEXT.search(text):
+        return None
+    if _requests_code_disclosure(text):
+        return "disclosure_request"
+    if not _CODE_WITH_DIGITS.search(text):
+        return None
+    if _LINK.search(text) or _HARMFUL_ADDITIONAL_REQUEST.search(text):
+        return None
+    return "routine_code"
+
+
+def review_otp_message(text: str, output: DetectionOutput) -> DetectionOutput:
+    """Correct obvious OTP confusion while retaining uncertainty elsewhere.
+
+    Note: scores are conservative decision signals, NOT calibrated probabilities.
+    """
+    signal = otp_signal(text)
+    if signal == "routine_code":
+        return output.model_copy(
+            update={
+                "danger_level": DangerLevel.SAFE,
+                "score": min(output.score, 0.05),
+                "tactics": [],
+                "scam_category": ScamCategory.OTHER,
+                "red_flags": [],
+                "recommended_action": (
+                    "Use only in the app or site you opened; never share the code."
+                ),
+                "legit_signals": [
+                    "A verification code is provided, not requested from you."
+                ],
+            }
+        )
+    if signal == "disclosure_request":
+        tactics = list(dict.fromkeys([*output.tactics, TacticName.CREDENTIAL_REQUEST]))
+        return output.model_copy(
+            update={
+                "danger_level": DangerLevel.DANGEROUS,
+                "score": max(output.score, 0.95),
+                "tactics": tactics,
+                "red_flags": ["Asks you to disclose a verification code."],
+                "recommended_action": (
+                    "Do not send the code; verify through the service directly."
+                ),
+                "legit_signals": [],
+            }
+        )
+    return output
