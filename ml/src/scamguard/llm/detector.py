@@ -1,10 +1,12 @@
 """Tactic-based structured detector powered by a local LLM backend."""
 
+from dataclasses import replace
 from pathlib import Path
 
 from scamguard.leakage import normalize_text
 from scamguard.llm.backend import LLMBackend, LLMRequest
 from scamguard.llm.cache import ResponseCache
+from scamguard.llm.otp_guard import review_otp_message
 from scamguard.llm.prompting import PromptBundle, build_prompt, message_prompt
 from scamguard.llm.runner import StructuredRunner, StructuredRunResult
 from scamguard.llm.schema import DetectionOutput
@@ -42,4 +44,9 @@ class LocalLLMDetector:
             prompt_version=self.prompt.cache_version,
             normalized_text=normalize_text(text),
         )
-        return self.runner.run(request)
+        result = self.runner.run(request)
+        # v2 is frozen for historical experiments. v3 opts into the new guard;
+        # errors still remain errors (no silent fallback to SAFE).
+        if self.prompt.version == "v3" and result.ok and result.value is not None:
+            return replace(result, value=review_otp_message(text, result.value))
+        return result
